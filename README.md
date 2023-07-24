@@ -8,9 +8,9 @@
   
 ---
 
-# ShellScript Repository
-
 Welcome to my ShellScript repository! This repository contains a collection of useful shell scripts for software installation, configuration, and various settings. With these scripts, you can automate the process of setting up your system and installing essential software.
+
+---
 
 </div>
 
@@ -47,8 +47,33 @@ To get started, clone this repository to your local machine using the following 
 ```bash
 git clone https://github.com/your-username/your-shellscript-repo.git
 cd your-shellscript-repo
+```  
 
-  
----
+## Usage
 
-</div>
+### Running a Shell Script
+
+To run a shell script, navigate to the repository's root directory and execute the script using Bash. For example:
+
+```bash
+cd your-shellscript-repo
+./install_software.sh
+```
+Before running a script, make sure to review its contents and any instructions provided in the script's comments.
+
+## Scripts Overview
+
+The repository contains the following types of shell scripts:
+
+### Software Installation
+
+- **`install_nodejs.sh`**: Installs Node.js and npm package manager.
+- **`install_docker.sh`**: Installs Docker and Docker Compose for container management.
+- **`install_vscode.sh`**: Installs Visual Studio Code editor with common extensions.
+- **`install_java.sh`**: Installs OpenJDK for Java development.
+
+### Software Settings
+
+- **`configure_git.sh`**: Configures Git with user information and default settings.
+- **`configure_network.sh`**: Configures network settings for optimized performance.
+- **`configure_bashrc.sh`**: Configures the Bash environment with custom aliases and settings.
