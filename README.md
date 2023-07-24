@@ -69,13 +69,14 @@ The repository contains the following types of shell scripts:
 
 ### Software Installation
 
-- **`install_nodejs.sh`**: Installs Node.js and npm package manager.
-- **`install_docker.sh`**: Installs Docker and Docker Compose for container management.
-- **`install_vscode.sh`**: Installs Visual Studio Code editor with common extensions.
-- **`install_java.sh`**: Installs OpenJDK for Java development.
-
 ### Software Settings
 
-- **`configure_git.sh`**: Configures Git with user information and default settings.
-- **`configure_network.sh`**: Configures network settings for optimized performance.
-- **`configure_bashrc.sh`**: Configures the Bash environment with custom aliases and settings.
+## Contributing
+
+Contributions to this repository are welcome! If you have a new script to add or want to improve existing scripts, please feel free to submit a pull request. Please ensure that your scripts are well-documented and follow best practices.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE), which means you are free to use, modify, and distribute the code. See the [LICENSE](LICENSE) file for more details.
+
+
