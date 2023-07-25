@@ -63,7 +63,7 @@ cd Software-Installation
 
 Now that you are in the folder, you must give execution permission to all the ShellScript files on it wit the use of the following command:
 ```bash
-chmod +x *.sh # This command is needed only needed once (at the first time)
+chmod +x *.sh # This command is needed only needed once (at the first time you're inside of a folder that contains ShellScript files)
 ```
 
 At this point you are able to run any desired ShellScript just by running:
