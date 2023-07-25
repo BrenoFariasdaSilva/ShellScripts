@@ -1,8 +1,8 @@
 #!/bin/sh
 
 # Run:
-# chmod +x LinuxAll.sh
-# sudo ./LinuxAll.sh
+# chmod +x RunAll.sh
+# sudo ./RunAll.sh
 
 # Open terminal as root:
 # sudo -i
