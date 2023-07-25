@@ -47,7 +47,7 @@ Before using the shell scripts, ensure that you have the following installed on 
 To get started, clone this repository to your local machine using the following command:
 
 ```bash
-git clone [https://github.com/your-username/your-shellscript-repo.git](https://github.com/BrenoFariasdaSilva/ShellScripts.git)
+git clone https://github.com/BrenoFariasdaSilva/ShellScripts.git
 cd ShellScripts
 ```  
 
@@ -59,7 +59,7 @@ To run a shell script, navigate to the repository's root directory and navigate 
 
 ```bash
 cd Linux
-./LinuxSetup.sh
+./Software-Installation.sh
 ```
 Before running a script, make sure to review its contents and any instructions provided in the script's comments.
 
