@@ -16,17 +16,19 @@ Welcome to my ShellScript repository! This repository contains a collection of u
 
 ## Table of Contents
 
-1. [Introduction](#introduction)
-2. [Getting Started](#getting-started)
+- [ShellScripts. ](#shellscripts-)
+  - [Table of Contents](#table-of-contents)
+  - [Introduction](#introduction)
+  - [Getting Started](#getting-started)
     - [Prerequisites](#prerequisites)
     - [Clone the Repository](#clone-the-repository)
-3. [Usage](#usage)
+  - [Usage](#usage)
     - [Running a Shell Script](#running-a-shell-script)
-4. [Scripts Overview](#scripts-overview)
+  - [Scripts Overview](#scripts-overview)
     - [Software Installation](#software-installation)
     - [Software Settings](#software-settings)
-5. [Contributing](#contributing)
-6. [License](#license)
+  - [Contributing](#contributing)
+  - [License](#license)
 
 ## Introduction
 
@@ -61,7 +63,7 @@ cd Software-Installation
 
 Now that you are in the folder, you must give execution permission to all the ShellScript files on it wit the use of the following command:
 ```bash
-chmod +x *.sh # This command is needed only needed once (at the first time you're inside of a folder that contains ShellScript files)
+chmod +x ./*.sh # This command is needed only needed once (at the first time you're inside of a folder that contains ShellScript files)
 ```
 
 At this point you are able to run any desired ShellScript just by running:
