@@ -8,29 +8,34 @@
 # sudo -i
 sudo su
 
+# Update system
 full_system_update() {
-  sudo apt update -y
-  sudo apt dist-upgrade -y
-  apt-get full-upgrade -y
+  sudo apt update -y # Update the list of available packages
+  sudo apt dist-upgrade -y # Install updates
+  apt-get full-upgrade -y # Full upgrade
 }
 
+# Update package list
 update_package_list() {
   sudo apt update -y
 }
 
+# Grant ShellScripts Execution Permissions
 grant_permissions() {
-  chmod +x ./*.sh
+  chmod +x ./*.sh # Grant Execution Permission to all ShellScripts
 }
 
+# Run all ShellScripts
 run_scripts() {
-  ./LinuxBasic.sh
-  ./LinuxMedia.sh
-  ./LinuxTools.sh
-  ./LinuxCoding.sh
-  ./LinuxGames.sh
-  ./LinuxSnap.sh
+  ./LinuxBasic.sh # Run LinuxBasic.sh
+  ./LinuxMedia.sh # Run LinuxMedia.sh
+  ./LinuxTools.sh # Run LinuxTools.sh
+  ./LinuxCoding.sh # Run LinuxCoding.sh
+  ./LinuxGames.sh # Run LinuxGames.sh
+  ./LinuxSnap.sh # Run LinuxSnap.sh
 }
 
+# Run all functions
 full_system_update
 grant_permissions
 run_scripts
