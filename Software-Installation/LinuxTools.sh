@@ -37,9 +37,6 @@ sudo apt install chrome-gnome-shell -y
 # Cloc - Count lines of Code:
 sudo apt install cloc -y
 
-# DPKG:
-sudo apt-get -y install dpkg
-
 # DrawIO
 cd ~/Downloads
 wget https://github.com/jgraph/drawio-desktop/releases/download/v13.0.3/draw.io-amd64-13.0.3.deb

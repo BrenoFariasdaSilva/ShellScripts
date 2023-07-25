@@ -22,6 +22,9 @@ sudo apt install wget -y
 # Git:
 sudo apt-get install git -y
 
+# DPKG:
+sudo apt-get -y install dpkg
+
 # 7Zip
 sudo apt-get install p7zip-full -y
 
