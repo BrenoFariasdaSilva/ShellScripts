@@ -266,9 +266,9 @@ sudo apt install clang-12 -y
 
 # Codon:
 /bin/bash -c "$(curl -fsSL https://exaloop.io/install.sh)"
-export PATH=/home/brenofarias/.codon/bin:$PATH
-echo 'export PATH=/home/brenofarias/.codon/bin:$PATH' >> ~/.bashrc 
-echo 'export PATH=/home/brenofarias/.codon/bin:$PATH' >> ~/.zshrc 
+export PATH=/home/$(whoami)/.codon/bin:$PATH
+echo 'export PATH=/home/$(whoami)/.codon/bin:$PATH' >> ~/.bashrc 
+echo 'export PATH=/home/$(whoami)/.codon/bin:$PATH' >> ~/.zshrc 
 
 # Docker:
 sudo apt update -y
