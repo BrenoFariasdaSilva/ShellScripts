@@ -58,6 +58,10 @@ sudo apt install gnome-shell-extensions -y
 # Gnome Shell Extension Manager:
 sudo apt install gnome-shell-extension-manager -y
 
+# Gnome Extensions CLI:
+sudo apt-get install python3 python3-venv python3-pip -y
+pip3 install --upgrade gnome-extensions-cli
+
 # LM-Sensors:
 sudo apt install lm-sensors
 
