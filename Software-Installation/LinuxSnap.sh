@@ -34,6 +34,3 @@ sudo snap install spotify
 sudo snap install teams-for-linux
 sudo snap install whatsapp-for-linux
 sudo snap install yuzu
-
-# Update System:
-sudo apt update -y

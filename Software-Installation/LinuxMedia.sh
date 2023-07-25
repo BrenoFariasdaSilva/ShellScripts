@@ -60,6 +60,3 @@ rm ./skypeforlinux-64.deb
 
 # VLC:
 sudo apt install vlc -y
-
-# Update System:
-sudo apt update -y

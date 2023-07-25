@@ -96,6 +96,3 @@ sudo apt-get install vim -y
 sudo apt install virtualbox -y
 sudo apt-get install virtualbox-guest-additions-iso -y
 sudo apt install build-essential dkms linux-headers-$(uname -r)
-
-# Update System:
-sudo apt update -y

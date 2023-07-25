@@ -17,6 +17,3 @@ sudo apt update -y
 sudo add-apt-repository multiverse -y
 sudo apt update -y
 sudo apt install steam -y
-
-# Update System:
-sudo apt update -y
