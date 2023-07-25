@@ -58,8 +58,17 @@ cd ShellScripts
 To run a shell script, navigate to the repository's root directory and navigate to the repository folder script to execute the script using Bash. For example:
 
 ```bash
-cd Linux
-./Software-Installation.sh
+cd Software-Installation
+```
+
+Now that you are in the folder, you must give execution permission to all the ShellScript files on it wit the use of the following command:
+```bash
+chmod +x *.sh # This command is needed only needed once (at the first time)
+```
+
+At this point you are able to run any desired ShellScript just by running:
+```bash
+./ShellScriptFilename.sh # Example: ./LinuxBasic.sh
 ```
 Before running a script, make sure to review its contents and any instructions provided in the script's comments.
 
