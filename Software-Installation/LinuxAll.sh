@@ -196,9 +196,6 @@ sudo apt install net-tools
 # OCR Tesseract
 sudo apt-get install tesseract-ocr-all -y
 
-# PortMaster:
-sudo apt install libnetfilter-queue1 libappindicator3-1 -y
-
 # Signal:
 cd ~/Downloads
 wget -O- https://updates.signal.org/desktop/apt/keys.asc | gpg --dearmor >signal-desktop-keyring.gpg
