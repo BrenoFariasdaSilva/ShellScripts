@@ -25,6 +25,12 @@ sudo apt-get install git -y
 # 7Zip
 sudo apt-get install p7zip-full -y
 
+# Unzip:
+sudo apt-get install unzip -y
+
+# Zip:
+sudo apt-get install zip -y
+
 # Brave Browser:
 sudo apt install apt-transport-https curl gnupg
 curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add -
@@ -72,12 +78,6 @@ sudo apt install qbittorrent -y
 sudo apt-get install curl -y
 curl -s https://packagecloud.io/install/repositories/ookla/speedtest-cli/script.deb.sh | sudo bash
 sudo apt-get install speedtest -y
-
-# Unzip:
-sudo apt-get install unzip -y
-
-# Zip:
-sudo apt-get install zip -y
 
 # Update System:
 sudo apt update -y
