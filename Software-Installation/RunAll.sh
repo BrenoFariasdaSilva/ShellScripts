@@ -10,7 +10,7 @@ sudo su
 
 # Update system
 full_system_update() {
-  sudo apt update -y # Update the list of available packages
+  update_package_list # Call the update_package_list function to update the package list
   sudo apt dist-upgrade -y # Install updates
   apt-get full-upgrade -y # Full upgrade
 }
