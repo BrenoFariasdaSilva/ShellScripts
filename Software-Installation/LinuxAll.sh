@@ -8,10 +8,15 @@
 # sudo -i
 sudo su
 
-# Update commands:
-sudo apt update -y
-sudo apt dist-upgrade -y
-apt-get full-upgrade -y
+full_system_update() {
+  sudo apt update -y
+  sudo apt dist-upgrade -y
+  apt-get full-upgrade -y
+}
+
+update_package_list() {
+  sudo apt update -y
+}
 
 grant_permissions() {
   chmod +x ./*.sh
@@ -26,5 +31,7 @@ run_scripts() {
   ./LinuxSnap.sh
 }
 
+full_system_update
 grant_permissions
 run_scripts
+update_package_list
