@@ -12,8 +12,6 @@ Welcome to my ShellScript repository! This repository contains a collection of u
 
 ---
 
-@TODO: ShellScript that does chmod for all the SHs files.
-
 </div>
 
 ## Table of Contents
