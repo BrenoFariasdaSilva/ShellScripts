@@ -75,8 +75,10 @@ Before running a script, make sure to review its contents and any instructions p
 The repository contains the following types of shell scripts:
 
 ### Software Installation
+These scripts are located in the `Software-Installation` folder.
 
 ### Software Settings
+These scripts are located in the `Software-Settings` folder.
 
 ## Contributing
 
