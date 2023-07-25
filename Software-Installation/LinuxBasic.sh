@@ -13,9 +13,6 @@ sudo apt update -y
 
 #---Basic Softwares---#
 
-# 7Zip
-sudo apt-get install p7zip-full -y
-
 # Curl: 
 sudo apt install curl -y
 
@@ -24,6 +21,9 @@ sudo apt install wget -y
 
 # Git:
 sudo apt-get install git -y
+
+# 7Zip
+sudo apt-get install p7zip-full -y
 
 # Brave Browser:
 sudo apt install apt-transport-https curl gnupg
@@ -34,7 +34,7 @@ sudo apt install brave-browser -y
 
 # Cron Job:
 sudo apt-get install cron
-# nano /etc/crontab
+# CronJobs File Location: nano /etc/crontab
 
 # Directory Tree:
 sudo apt install tree -y
