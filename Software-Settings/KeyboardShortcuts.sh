@@ -4,7 +4,7 @@
 # chmod +x KeyboardShortcuts.sh
 # sudo ./KeyboardShortcuts.sh
 
-# Open Keyboard Shortcuts in System Preferences: Settings -> Keyboard Shortcuts
+echo "Setting Keyboard Shortcuts..."
 
 # 1. Set the "Show Applications" Keyboard Shortcut to "Super/Windows + S"
 gsettings set org.gnome.shell.keybindings toggle-application-view "['<Super>s']"
@@ -22,6 +22,7 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys terminal "['<Super>t'
 gsettings set org.gnome.desktop.wm.keybindings close "['<Alt>F4']"
 
 # If any of this doesn't work, add the failed ones manually:
+# Open Keyboard Shortcuts in System Preferences: Settings -> Keyboard Shortcuts
 # Scroll down to the bottom and click the + button and add the following:
 # Name: AppName -> Example: Terminal
 # Command: gnome-AppCommand -> Example: gnome-terminal
