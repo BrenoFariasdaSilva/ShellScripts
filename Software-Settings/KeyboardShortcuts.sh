@@ -10,7 +10,7 @@
 gsettings set org.gnome.shell.keybindings toggle-application-view "['<Super>s']"
 
 # 2. Set the "Show Desktop" Keyboard Shortcut to "Super/Windows + D"
-gsettings set org.gnome.desktop.wm.keybindings show-desktop "['<Super>d']"s
+gsettings set org.gnome.desktop.wm.keybindings show-desktop "['<Super>d']"
 
 # 3. Set the "Home Folder" Keyboard Shortcut to "Super/Windows + E"
 gsettings set org.gnome.settings-daemon.plugins.media-keys home "['<Super>e']"
