@@ -6,19 +6,22 @@
 
 echo "Setting Keyboard Shortcuts..."
 
-# 1. Set the "Show Applications" Keyboard Shortcut to "Super/Windows + S"
+# 1. Set the "Activities" Keyboard Shortcut to "Super/Windows"
+gsettings set org.gnome.mutter overlay-key "'Super_L'"
+
+# 2. Set the "Show Applications" Keyboard Shortcut to "Super/Windows + S"
 gsettings set org.gnome.shell.keybindings toggle-application-view "['<Super>s']"
 
-# 2. Set the "Show Desktop" Keyboard Shortcut to "Super/Windows + D"
+# 3. Set the "Show Desktop" Keyboard Shortcut to "Super/Windows + D"
 gsettings set org.gnome.desktop.wm.keybindings show-desktop "['<Super>d']"
 
-# 3. Set the "Home Folder" Keyboard Shortcut to "Super/Windows + E"
+# 4. Set the "Home Folder" Keyboard Shortcut to "Super/Windows + E"
 gsettings set org.gnome.settings-daemon.plugins.media-keys home "['<Super>e']"
 
-# 4. Set the "Terminal" Keyboard Shortcut to "Super/Windows + T"
+# 5. Set the "Terminal" Keyboard Shortcut to "Super/Windows + T"
 gsettings set org.gnome.settings-daemon.plugins.media-keys terminal "['<Super>t']"
 
-# 5. Set the "Close Window" Keyboard Shortcut to "Alt + F4"
+# 6. Set the "Close Window" Keyboard Shortcut to "Alt + F4"
 gsettings set org.gnome.desktop.wm.keybindings close "['<Alt>F4']"
 
 # If any of this doesn't work, add the failed ones manually:
