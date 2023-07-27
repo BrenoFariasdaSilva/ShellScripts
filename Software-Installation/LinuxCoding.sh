@@ -116,7 +116,7 @@ sudo apt install maven -y
 sudo apt install wget curl gnupg2 software-properties-common apt-transport-https ca-certificates lsb-release -y
 curl -fsSL https://www.mongodb.org/static/pgp/server-6.0.asc | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/mongodb-6.gpg
 echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/6.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-6.0.list
-cd ~/Downloads
+cd ~/Downloads || return
 wget http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.1_1.1.1f-1ubuntu2.16_amd64.deb
 sudo dpkg -i ./libssl1.1_1.1.1f-1ubuntu2.16_amd64.deb
 sudo apt update && sudo apt upgrade
@@ -168,7 +168,7 @@ curl -fL https://github.com/coursier/coursier/releases/latest/download/cs-x86_64
 sudo apt update -y
 sudo apt install software-properties-common apt-transport-https cd ~/Downloads
 wget -y
-cd ~/Downloads
+cd ~/Downloads || return 
 wget -O- https://packages.microsoft.com/keys/microsoft.asc | sudo gpg --dearmor | sudo tee /usr/share/keyrings/vscode.gpg
 echo deb [arch=amd64 signed-by=/usr/share/keyrings/vscode.gpg] https://packages.microsoft.com/repos/vscode stable main | sudo tee /etc/apt/sources.list.d/vscode.list
 sudo apt update -y

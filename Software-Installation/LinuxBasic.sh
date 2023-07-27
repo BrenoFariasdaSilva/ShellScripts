@@ -54,7 +54,7 @@ sudo apt update -y
 sudo apt install firefox -y
 
 # Google Chrome:
-cd ~/Downloads
+cd ~/Downloads || return
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-stable_current_amd64.deb
 rm ./google-chrome-stable_current_amd64.deb

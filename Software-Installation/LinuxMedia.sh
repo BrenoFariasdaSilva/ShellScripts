@@ -20,7 +20,7 @@ sudo apt install audacity -y
 sudo apt install blender -y
 
 # Franz - Messenger:
-cd ~/Downloads
+cd ~/Downloads || return
 wget https://github.com/meetfranz/franz/releases/download/v5.9.2/franz_5.9.2_amd64.deb
 sudo apt install ./franz_5.9.2_amd64.deb -y
 rm ./franz_5.9.2_amd64.deb
@@ -34,7 +34,7 @@ sudo apt update -y
 sudo apt-get install kdenlive -y
 
 # MegaSync:
-cd ~/Downloads
+cd ~/Downloads || return
 wget https://mega.nz/linux/repo/xUbuntu_22.04/amd64/megasync-xUbuntu_22.04_amd64.deb
 sudo apt install ./megasync-xUbuntu_22.04_amd64.deb
 rm ./megasync-xUbuntu_22.04_amd64.deb
@@ -53,7 +53,7 @@ sudo apt update -y
 sudo apt-get install pinta -y
 
 # Skype:
-cd ~/Downloads
+cd ~/Downloads || return
 wget https://go.skype.com/skypeforlinux-64.deb
 sudo apt install ./skypeforlinux-64.deb -y
 rm ./skypeforlinux-64.deb
