@@ -20,7 +20,8 @@ git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.10.2
 
 # SDKMAN:
 curl -s "https://get.sdkman.io" | bash
-source "$HOME/.sdkman/bin/sdkman-init.sh"
+# source "$HOME/.sdkman/bin/sdkman-init.sh"
+. "$HOME/.sdkman/bin/sdkman-init.sh"
 sdk version
 
 # C:
