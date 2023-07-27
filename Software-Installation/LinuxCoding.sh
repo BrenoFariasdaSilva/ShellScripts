@@ -165,6 +165,9 @@ sudo apt install ruby -y
 # Scala:
 curl -fL https://github.com/coursier/coursier/releases/latest/download/cs-x86_64-pc-linux.gz | gzip -d > cs && chmod +x cs && ./cs setup
 
+# ShellCheck:
+sudo apt install shellcheck -y
+
 # Visual Studio Code
 sudo apt update -y
 sudo apt install software-properties-common apt-transport-https cd ~/Downloads
