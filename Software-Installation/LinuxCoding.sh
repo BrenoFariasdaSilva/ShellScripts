@@ -15,8 +15,8 @@ sudo apt update -y
 
 # ASDF:
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.10.2
-$HOME/.asdf/asdf.sh
-$HOME/.asdf/completions/asdf.bash
+"$HOME/.asdf/asdf.sh"
+"$HOME/.asdf/completions/asdf.bash"
 
 # SDKMAN:
 curl -s "https://get.sdkman.io" | bash
@@ -48,9 +48,9 @@ sudo apt install clang-12 -y
 
 # Codon:
 /bin/bash -c "$(curl -fsSL https://exaloop.io/install.sh)"
-export PATH=/home/brenofarias/.codon/bin:$PATH
-echo 'export PATH=/home/brenofarias/.codon/bin:$PATH' >> ~/.bashrc 
-echo 'export PATH=/home/brenofarias/.codon/bin:$PATH' >> ~/.zshrc 
+export PATH="/home/brenofarias/.codon/bin:$PATH"
+echo "export PATH=/home/brenofarias/.codon/bin:\$PATH" >> ~/.bashrc
+echo "export PATH=/home/brenofarias/.codon/bin:\$PATH" >> ~/.zshrc
 
 # Docker:
 sudo apt update -y
@@ -67,7 +67,7 @@ echo \
 sudo apt update -y
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y
 sudo groupadd docker
-sudo usermod -aG docker $USER
+sudo usermod -aG docker "$USER"
 sudo apt get install docker -y
 sudo apt install docker.io -y
 sudo curl -L "https://github.com/docker/compose/releases/download/1.23.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
@@ -79,10 +79,10 @@ sudo docker rm hello-world-container
 
 # Fly.io:
 curl -L https://fly.io/install.sh | sh
-echo 'export FLYCTL_INSTALL="/home/$(whoami)/.fly"' >> ~/.bashrc
-echo 'export FLYCTL_INSTALL="/home/$(whoami)/.fly"' >> ~/.zshrc
-echo 'export PATH="$FLYCTL_INSTALL/bin:$PATH"' >> ~/.bashrc
-echo 'export PATH="$FLYCTL_INSTALL/bin:$PATH"' >> ~/.zshrc
+echo "export FLYCTL_INSTALL=\"/home/$(whoami)/.fly\"" >> ~/.bashrc
+echo "export FLYCTL_INSTALL=\"/home/$(whoami)/.fly\"" >> ~/.zshrc
+echo "export PATH=\"\$FLYCTL_INSTALL/bin:\$PATH\"" >> ~/.bashrc
+echo "export PATH=\"\$FLYCTL_INSTALL/bin:\$PATH\"" >> ~/.zshrc
 
 # Insomnia:
 echo "deb [trusted=yes arch=amd64] https://download.konghq.com/insomnia-ubuntu/ default all" |
