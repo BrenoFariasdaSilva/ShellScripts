@@ -74,6 +74,9 @@ sudo apt install net-tools
 # OCR Tesseract
 sudo apt-get install tesseract-ocr-all -y
 
+# PulseEffects:
+sudo apt install pulseeffects -y
+
 # Signal:
 cd ~/Downloads || return
 wget -O- https://updates.signal.org/desktop/apt/keys.asc | gpg --dearmor >signal-desktop-keyring.gpg
