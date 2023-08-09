@@ -23,6 +23,7 @@ update_package_list() {
 # Grant ShellScripts Execution Permissions
 grant_permissions() {
   chmod +x ./*.sh # Grant Execution Permission to all ShellScripts
+  chmod +x SubScripts/*.sh # Grant Execution Permission to all ShellScripts inside SubScripts folder
 }
 
 # Run all ShellScripts
