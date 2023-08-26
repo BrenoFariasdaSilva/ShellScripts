@@ -74,6 +74,11 @@ sudo apt install net-tools
 # OCR Tesseract
 sudo apt-get install tesseract-ocr-all -y
 
+# OpenRGB:
+sudo add-apt-repository ppa:thopiekar/openrgb -y
+sudo apt update -y
+sudo apt install openrgb -y
+
 # PulseEffects:
 sudo apt install pulseeffects -y
 
