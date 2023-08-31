@@ -90,5 +90,3 @@ Contributions to this repository are welcome! If you have a new script to add or
 ## License
 
 This project is licensed under the [MIT License](LICENSE), which means you are free to use, modify, and distribute the code. See the [LICENSE](LICENSE) file for more details.
-
-
