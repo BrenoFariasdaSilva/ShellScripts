@@ -36,8 +36,15 @@ run_scripts() {
   ./LinuxSnap.sh # Run LinuxSnap.sh
 }
 
+# Run all SubScripts
+run_sub_scripts() {
+  ./SubScripts/GnomeExtensions.sh # Run LinuxAndroidStudio.sh
+  ./SubScripts/LinuxAnaconda.sh # Run LinuxAnaconda.sh
+}
+
 # Run all functions
 full_system_update
 grant_permissions
 run_scripts
+run_sub_scripts
 update_package_list
