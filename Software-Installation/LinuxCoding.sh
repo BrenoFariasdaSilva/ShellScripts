@@ -97,6 +97,7 @@ java -version
 
 # Python:
 sudo apt-get install python3 python3-venv python3-pip -y
+# sudo apt install python-is-python3
 
 # Jupyter using Pip
 pip install jupyterlab
