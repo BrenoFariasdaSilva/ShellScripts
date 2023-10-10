@@ -4,6 +4,8 @@
 # chmod +x BetterDiscord.sh
 # sudo ./BetterDiscord.sh
 
+cwd=$(pwd)
+
 # BetterDiscord:
 # Change to the Downloads directory or return if it fails
 cd ~/Downloads || exit
@@ -22,3 +24,6 @@ sudo betterdiscordctl self-upgrade
 
 # Install BetterDiscord
 betterdiscordctl install
+
+# Run the Python script
+python3 "$cwd"/BetterDiscord.py
