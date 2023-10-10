@@ -38,6 +38,7 @@ run_scripts() {
 
 # Run all SubScripts
 run_sub_scripts() {
+  ./SubScripts/BetterDiscord.sh # Run BetterDiscord.sh
   ./SubScripts/GnomeExtensions.sh # Run LinuxAndroidStudio.sh
   ./SubScripts/LinuxAnaconda.sh # Run LinuxAnaconda.sh
 }
