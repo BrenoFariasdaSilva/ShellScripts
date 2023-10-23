@@ -59,6 +59,9 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-stable_current_amd64.deb
 rm ./google-chrome-stable_current_amd64.deb
 
+# HTOP:
+sudo apt install htop -y
+
 # LibreOffice:
 sudo add-apt-repository ppa:libreoffice/ppa -y
 sudo apt update -y
