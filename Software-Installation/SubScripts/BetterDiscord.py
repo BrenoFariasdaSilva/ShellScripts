@@ -73,6 +73,6 @@ def main():
 	# Print a message to indicate that the script has completed
 	print("The BetterDiscord Plugins and Themes have been downloaded and moved successfully!")
 
-# Execute the main function
+# This is the standard boilerplate that calls the main() function.
 if __name__ == "__main__":
-	main()
+	main() # Call the main function
