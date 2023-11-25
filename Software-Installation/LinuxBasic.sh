@@ -25,7 +25,7 @@ sudo apt-get install git -y
 # DPKG:
 sudo apt-get -y install dpkg
 
-# 7Zip
+# 7Zip:
 sudo apt-get install p7zip-full -y
 
 # Unzip:
@@ -48,7 +48,7 @@ sudo apt-get install cron
 # Directory Tree:
 sudo apt install tree -y
 
-# Firefox
+# Firefox:
 sudo add-apt-repository ppa:ubuntu-mozilla-security/ppa -y
 sudo apt update -y
 sudo apt install firefox -y
@@ -59,7 +59,7 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-stable_current_amd64.deb
 rm ./google-chrome-stable_current_amd64.deb
 
-# HTOP:
+# HTop:
 sudo apt install htop -y
 
 # LibreOffice:

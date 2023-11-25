@@ -28,7 +28,7 @@ rm ./franz_5.9.2_amd64.deb
 # Gimp:
 sudo apt install gimp -y
 
-# KDenLive Video Editor
+# KDenLive Video Editor:
 sudo add-apt-repository ppa:kdenlive/kdenlive-stable -y
 sudo apt update -y
 sudo apt-get install kdenlive -y
@@ -45,7 +45,7 @@ sudo apt install mpv -y
 # OBS Studio:
 sudo apt install obs-studio -y
 
-# OpenShot Video Editor
+# OpenShot Video Editor:
 sudo apt-add-repository ppa:openshot.developers/libopenshot-daily -y
 sudo apt update -y 
 sudo apt-get install openshot-qt -y

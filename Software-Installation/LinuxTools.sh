@@ -37,7 +37,7 @@ sudo apt install chrome-gnome-shell -y
 # Cloc - Count lines of Code:
 sudo apt install cloc -y
 
-# DrawIO
+# DrawIO:
 cd ~/Downloads || return
 wget https://github.com/jgraph/drawio-desktop/releases/download/v13.0.3/draw.io-amd64-13.0.3.deb
 sudo dpkg -i draw.io-amd64-13.0.3.deb
@@ -65,13 +65,13 @@ pip3 install --upgrade gnome-extensions-cli
 # LM-Sensors:
 sudo apt install lm-sensors
 
-# LibFuse2 AppImage Runner
+# LibFuse2 AppImage Runner:
 sudo apt install libfuse2 -y
 
 # Net-Tools:
 sudo apt install net-tools
 
-# OCR Tesseract
+# OCR Tesseract:
 sudo apt-get install tesseract-ocr-all -y
 
 # OpenRGB:
@@ -98,14 +98,13 @@ echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sou
 sudo apt update -y
 sudo apt-get install sublime-text -y
 
-# Telegram Desktop
+# Telegram Desktop:
 sudo apt install telegram-desktop -y
 
 # Vim:
 sudo apt-get install vim -y
 
-# VirtualBox
+# VirtualBox:
 sudo apt install virtualbox -y
 sudo apt-get install virtualbox-guest-additions-iso -y
 sudo apt install build-essential dkms "linux-headers-$(uname -r)"
-
