@@ -39,6 +39,9 @@ wget https://mega.nz/linux/repo/xUbuntu_22.04/amd64/megasync-xUbuntu_22.04_amd64
 sudo apt install ./megasync-xUbuntu_22.04_amd64.deb
 rm ./megasync-xUbuntu_22.04_amd64.deb
 
+# MPV:
+sudo apt install mpv -y
+
 # OBS Studio:
 sudo apt install obs-studio -y
 
