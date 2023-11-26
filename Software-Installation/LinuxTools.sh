@@ -62,6 +62,9 @@ sudo apt install gnome-shell-extension-manager -y
 sudo apt-get install python3 python3-venv python3-pip -y
 pip3 install --upgrade gnome-extensions-cli
 
+# JabRef:
+sudo apt install jabref -y
+
 # LM-Sensors:
 sudo apt install lm-sensors
 
