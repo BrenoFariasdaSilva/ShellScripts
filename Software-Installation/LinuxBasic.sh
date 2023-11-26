@@ -23,7 +23,7 @@ sudo apt install wget -y
 sudo apt-get install git -y
 
 # DPKG:
-sudo apt-get -y install dpkg
+sudo apt-get install dpkg -y
 
 # 7Zip:
 sudo apt-get install p7zip-full -y
@@ -35,14 +35,14 @@ sudo apt-get install unzip -y
 sudo apt-get install zip -y
 
 # Brave Browser:
-sudo apt install apt-transport-https curl gnupg
+sudo apt install apt-transport-https curl gnupg -y
 curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add -
 echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
 sudo apt update -y
 sudo apt install brave-browser -y
 
 # Cron Job:
-sudo apt-get install cron
+sudo apt-get install cron -y
 # CronJobs File Location: nano /etc/crontab
 
 # Directory Tree:

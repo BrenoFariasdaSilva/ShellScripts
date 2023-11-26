@@ -19,7 +19,7 @@ sudo apt-get update -y
 sudo apt-get install alien -y
 
 # Apitude:
-sudo apt-get -y install aptitude
+sudo apt-get install aptitude -y
 
 # Atom:
 cd ~/Downloads || return
@@ -48,7 +48,7 @@ sudo apt-get install gdebi -y
 
 # Gnome Tweaks:
 sudo add-apt-repository universe -y
-sudo apt install gnome-tweaks
+sudo apt install gnome-tweaks -y
 sudo apt install gnome-tweaks-tool -y
 
 # Gnome Shell Extensions:
@@ -66,13 +66,13 @@ pip3 install --upgrade gnome-extensions-cli
 sudo apt install jabref -y
 
 # LM-Sensors:
-sudo apt install lm-sensors
+sudo apt install lm-sensors -y
 
 # LibFuse2 AppImage Runner:
 sudo apt install libfuse2 -y
 
 # Net-Tools:
-sudo apt install net-tools
+sudo apt install net-tools -y
 
 # OCR Tesseract:
 sudo apt-get install tesseract-ocr-all -y
@@ -94,7 +94,7 @@ echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/signal-desktop-keyring.gpg] 
 sudo apt update -y
 
 # Sublime:
-sudo apt-get install apt-transport-https
+sudo apt-get install apt-transport-https -y
 cd ~/Downloads || return
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/sublimehq-archive.gpg
 echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list

@@ -88,7 +88,7 @@ echo "export PATH=\"\$FLYCTL_INSTALL/bin:\$PATH\"" >> ~/.zshrc
 # Insomnia:
 echo "deb [trusted=yes arch=amd64] https://download.konghq.com/insomnia-ubuntu/ default all" |
 sudo tee -a /etc/apt/sources.list.d/insomnia.list
-sudo apt update && sudo apt upgrade
+sudo apt update && sudo apt upgrade -y
 sudo apt-get install insomnia -y
 
 # Java:
@@ -100,9 +100,9 @@ sudo apt-get install python3 python3-venv python3-pip -y
 # sudo apt install python-is-python3
 
 # Jupyter using Pip
-pip install jupyterlab
-pip install notebook
-pip install ipykernel
+pip install jupyterlab -y
+pip install notebook -y
+pip install ipykernel -y
 # Launch: jupyter-lab or jupyter notebook in terminal
 
 # Kotlin:
