@@ -36,7 +36,7 @@ sudo apt-get install kdenlive -y
 # MegaSync:
 cd ~/Downloads || return
 wget https://mega.nz/linux/repo/xUbuntu_22.04/amd64/megasync-xUbuntu_22.04_amd64.deb
-sudo apt install ./megasync-xUbuntu_22.04_amd64.deb
+sudo apt install ./megasync-xUbuntu_22.04_amd64.deb -y
 rm ./megasync-xUbuntu_22.04_amd64.deb
 
 # MPV:

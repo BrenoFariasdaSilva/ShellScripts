@@ -16,7 +16,7 @@ sudo apt update -y
 # Snapd:
 sudo apt install snapd -y
 sudo snap install core -y
-sudo snap install snap-store
+sudo snap install snap-store -y
 
 # Snap Softwares:
 sudo snap install authy

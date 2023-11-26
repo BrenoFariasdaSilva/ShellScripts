@@ -172,7 +172,8 @@ sudo apt install shellcheck -y
 
 # Visual Studio Code
 sudo apt update -y
-sudo apt install software-properties-common apt-transport-https cd ~/Downloads
+sudo apt install software-properties-common apt-transport-https -y
+cd ~/Downloads || return
 wget -y
 cd ~/Downloads || return 
 wget -O- https://packages.microsoft.com/keys/microsoft.asc | sudo gpg --dearmor | sudo tee /usr/share/keyrings/vscode.gpg
