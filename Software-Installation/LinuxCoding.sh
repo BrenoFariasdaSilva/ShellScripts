@@ -8,6 +8,7 @@
 echo "Updating System..."
 sudo apt update -y
 echo "System Updated!"
+echo ""
 
 #---Coding Softwares---#
 
@@ -17,20 +18,31 @@ git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.10.2
 "$HOME/.asdf/asdf.sh"
 "$HOME/.asdf/completions/asdf.bash"
 echo "ASDF Installed!"
+echo ""
 
 # SDKMAN:
 echo "Installing SDKMAN..."
-curl -s "https://get.sdkman.io" | bash
-# source "$HOME/.sdkman/bin/sdkman-init.sh"
-. "$HOME/.sdkman/bin/sdkman-init.sh"
+if [ -d "$HOME/.sdkman" ]; then
+  echo "SDKMAN is already installed. Updating..."
+  source "$HOME/.sdkman/bin/sdkman-init.sh"
+  sdk selfupdate force
+else
+  echo "Installing SDKMAN..."
+  curl -s "https://get.sdkman.io" | bash
+  source "$HOME/.sdkman/bin/sdkman-init.sh"
+  echo "SDKMAN Installed!"
+fi
+
 sdk version
 echo "SDKMAN Installed!"
+echo ""
 
 # C/C++:
 echo "Installing C/C++..."
 sudo apt install build-essential -y
 sudo apt-get install manpages-dev -y
 echo "C/C++ Installed!"
+echo ""
 
 # C#:
 echo "Installing C#..."
@@ -49,11 +61,13 @@ sudo apt-get install -y apt-transport-https &&
   sudo apt-get install -y dotnet-sdk-6.0
 rm packages-microsoft-prod.deb
 echo "C# Installed!"
+echo ""
 
 # CLang:
 echo "Installing CLang..."
 sudo apt install clang-12 -y
 echo "CLang Installed!"
+echo ""
 
 # Codon:
 echo "Installing Codon..."
@@ -62,6 +76,7 @@ export PATH="/home/brenofarias/.codon/bin:$PATH"
 echo "export PATH=/home/brenofarias/.codon/bin:\$PATH" >>~/.bashrc
 echo "export PATH=/home/brenofarias/.codon/bin:\$PATH" >>~/.zshrc
 echo "Codon Installed!"
+echo ""
 
 # Docker:
 echo "Installing Docker..."
@@ -89,6 +104,7 @@ sudo systemctl enable docker.service
 sudo systemctl enable containerd.service
 sudo docker rm hello-world-container
 echo "Docker Installed!"
+echo ""
 
 # Fly.IO:
 echo "Installing Fly.IO..."
@@ -98,6 +114,7 @@ echo "export FLYCTL_INSTALL=\"/home/$(whoami)/.fly\"" >>~/.zshrc
 echo "export PATH=\"\$FLYCTL_INSTALL/bin:\$PATH\"" >>~/.bashrc
 echo "export PATH=\"\$FLYCTL_INSTALL/bin:\$PATH\"" >>~/.zshrc
 echo "Fly.IO Installed!"
+echo ""
 
 # Insomnia:
 echo "Installing Insomnia..."
@@ -106,18 +123,21 @@ echo "deb [trusted=yes arch=amd64] https://download.konghq.com/insomnia-ubuntu/ 
 sudo apt update && sudo apt upgrade -y
 sudo apt-get install insomnia -y
 echo "Insomnia Installed!"
+echo ""
 
 # Java:
 echo "Installing Java..."
 sdk install java
 java -version
 echo "Java Installed!"
+echo ""
 
 # Python:
 echo "Installing Python..."
 sudo apt-get install python3 python3-venv python3-pip -y
 sudo apt install python-is-python3
 echo "Python Installed!"
+echo ""
 
 # Jupyter using Pip
 echo "Installing Jupyter..."
@@ -126,22 +146,26 @@ pip install notebook -y
 pip install ipykernel -y
 # Launch: jupyter-lab or jupyter notebook in terminal
 echo "Jupyter Installed!"
+echo ""
 
 # Kotlin:
 echo "Installing Kotlin..."
 sdk install kotlin
 kotlin -version
 echo "Kotlin Installed!"
+echo ""
 
 # MakeFile:
 echo "Installing MakeFile..."
 sudo apt install make -y
 echo "MakeFile Installed!"
+echo ""
 
 # Maven:
 echo "Installing Maven..."
 sudo apt install maven -y
 echo "Maven Installed!"
+echo ""
 
 # MongoDB:
 echo "Installing MongoDB..."
@@ -155,32 +179,38 @@ sudo apt update && sudo apt upgrade
 sudo apt install mongodb-org -y
 rm ./libssl1.1_1.1.1f-1ubuntu2.16_amd64.deb
 echo "MongoDB Installed!"
+echo ""
 
 # Mono CSharp:
 echo "Installing Mono CSharp..."
 sudo apt-get install -y mono-mcs
 echo "Mono CSharp Installed!"
+echo ""
 
 # NodeJS:
 echo "Installing NodeJS..."
 sudo apt install nodejs -y
 echo "NodeJS Installed!"
+echo ""
 
 # NPM
 echo "Installing NPM..."
 sudo apt install npm -y
 echo "NPM Installed!"
+echo ""
 
 # NestJS:
 echo "Installing NestJS..."
 sudo npm install -g @nestjs/cli
 echo "NestJS Installed!"
+echo ""
 
 # OpenGL:
 echo "Installing OpenGL..."
 sudo apt-get install freeglut3 freeglut3-dev libglew-dev -y
 sudo apt-get install mesa-utils -y
 echo "OpenGL Installed!"
+echo ""
 
 # PgAdmin:
 echo "Installing PgAdmin..."
@@ -191,39 +221,46 @@ sudo apt install pgadmin4-desktop -y
 sudo apt install pgadmin4-web -y
 sudo apt install pgadmin4 -y
 echo "PgAdmin Installed!"
+echo ""
 
 # Postgres:
 echo "Installing Postgres..."
 sudo apt install postgresql postgresql-contrib -y
 sudo systemctl start postgresql.service
 echo "Postgres Installed!"
+echo ""
 
 # PyPy:
 echo "Installing PyPy..."
 sudo apt install pypy -y
 sudo apt install pypy3 -y
 echo "PyPy Installed!"
+echo ""
 
 # React:
 echo "Installing React..."
 sudo npm install -g create-react-app
 echo "React Installed!"
+echo ""
 
 # Ruby:
 echo "Installing Ruby..."
 sudo apt install ruby -y
 echo "Ruby Installed!"
+echo ""
 
 # Scala:
 echo "Installing Scala..."
 curl -fL https://github.com/coursier/coursier/releases/latest/download/cs-x86_64-pc-linux.gz | gzip -d >cs && chmod +x cs && ./cs setup
 echo "export PATH=\"\$PATH\":~/.local/share/coursier/bin" >>~/.bashrc
 echo "Scala Installed!"
+echo ""
 
 # ShellCheck:
 echo "Installing ShellCheck..."
 sudo apt install shellcheck -y
 echo "ShellCheck Installed!"
+echo ""
 
 # Visual Studio Code
 echo "Installing Visual Studio Code..."
@@ -238,6 +275,7 @@ sudo apt update -y
 sudo apt install code -y
 wget -qO- https://raw.githubusercontent.com/harry-cpp/code-nautilus/master/install.sh | bash
 echo "Visual Studio Code Installed!"
+echo ""
 
 # Yarn:
 echo "Installing Yarn..."
@@ -246,5 +284,7 @@ curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 sudo apt install yarn -y
 echo "Yarn Installed!"
+echo ""
 
 echo "Coding Softwares Installed!"
+echo ""
