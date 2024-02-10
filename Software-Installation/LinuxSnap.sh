@@ -5,7 +5,7 @@
 # sudo ./LinuxSnap.sh
 # sudo -i
 
-# Update commands:
+# Update Commands:
 sudo apt update -y
 
 #---Snap Softwares---#

@@ -4,7 +4,7 @@
 # chmod +x LinuxCoding.sh
 # sudo ./LinuxCoding.sh
 
-# Update commands:
+# Update Commands:
 sudo apt update -y
 
 #---Coding Softwares---#

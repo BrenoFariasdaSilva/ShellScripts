@@ -4,7 +4,7 @@
 # chmod +x LinuxMedia.sh
 # sudo ./LinuxMedia.sh
 
-# Update commands:
+# Update Commands:
 sudo apt update -y
 
 #---Media Softwares---#

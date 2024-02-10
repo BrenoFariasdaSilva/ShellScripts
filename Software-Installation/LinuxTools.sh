@@ -4,7 +4,7 @@
 # chmod +x LinuxTools.sh
 # sudo ./LinuxTools.sh
 
-# Update commands:
+# Update Commands:
 sudo apt update -y
 
 #---Tools Softwares---#

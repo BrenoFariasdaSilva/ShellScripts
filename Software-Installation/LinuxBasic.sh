@@ -4,7 +4,7 @@
 # chmod +x LinuxBasic.sh
 # sudo ./LinuxBasic.sh
 
-# Update commands:
+# Update Commands:
 echo "Updating System..."
 sudo apt update -y
 echo "System Updated!"

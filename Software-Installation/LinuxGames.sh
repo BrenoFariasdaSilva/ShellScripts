@@ -4,7 +4,7 @@
 # chmod +x LinuxGames.sh
 # sudo ./LinuxGames.sh
 
-# Update commands:
+# Update Commands:
 sudo apt update -y
 
 #---Games Softwares---#
