@@ -136,10 +136,12 @@ echo ""
 
 # Insomnia:
 echo "Installing Insomnia..."
-echo "deb [trusted=yes arch=amd64] https://download.konghq.com/insomnia-ubuntu/ default all" |
-   sudo tee -a /etc/apt/sources.list.d/insomnia.list
-sudo apt update && sudo apt upgrade -y
-sudo apt install insomnia -y
+# Add the Insomnia repository
+echo "deb [trusted=yes arch=amd64] https://download.konghq.com/insomnia-ubuntu/ default all" | sudo tee /etc/apt/sources.list.d/insomnia.list
+# Use non-interactive frontend for apt and specify options to keep current config without prompting
+export DEBIAN_FRONTEND=noninteractive
+sudo apt-get update && sudo apt-get -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" upgrade
+sudo apt-get install -y insomnia
 echo "Insomnia Installed!"
 echo ""
 
