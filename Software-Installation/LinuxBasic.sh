@@ -139,3 +139,4 @@ echo "SpeedTest CLI Installed!"
 echo ""
 
 echo "All Basic Softwares Installed!"
+echo ""
