@@ -67,7 +67,6 @@ wget "$DOWNLOAD_URL" # Download the latest .deb package
 DEB_FILE=$(basename "$DOWNLOAD_URL") # Extract the file name from the download URL
 sudo dpkg -i "$DEB_FILE" # Install the downloaded package
 rm "$DEB_FILE" # Remove the .deb package after installation
-
 echo "DrawIO Installed!"
 echo ""
 
