@@ -8,7 +8,7 @@
 full_system_update() {
   update_package_list      # Call the update_package_list function to update the package list
   sudo apt dist-upgrade -y # Install updates
-  apt-get full-upgrade -y  # Full upgrade
+  apt full-upgrade -y      # Full upgrade
 }
 
 # Update package list

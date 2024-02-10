@@ -31,10 +31,10 @@ cd ~/Downloads || return
 LATEST_RELEASE_INFO=$(curl -s https://api.github.com/repos/meetfranz/franz/releases/latest)
 # Extract the download URL for the latest .deb package
 DOWNLOAD_URL=$(echo "$LATEST_RELEASE_INFO" | grep "browser_download_url.*deb" | cut -d '"' -f 4)
-wget "$DOWNLOAD_URL" # Download the .deb package
+wget "$DOWNLOAD_URL"                 # Download the .deb package
 DEB_FILE=$(basename "$DOWNLOAD_URL") # Extract the name of the downloaded .deb package
-sudo apt install "./$DEB_FILE" -y # Install the downloaded package
-rm "./$DEB_FILE" # Remove the downloaded package
+sudo apt install "./$DEB_FILE" -y    # Install the downloaded package
+rm "./$DEB_FILE"                     # Remove the downloaded package
 echo "Franz Installed!"
 echo ""
 
@@ -48,7 +48,7 @@ echo ""
 echo "Installing KDenLive..."
 sudo add-apt-repository ppa:kdenlive/kdenlive-stable -y
 sudo apt update -y
-sudo apt-get install kdenlive -y
+sudo apt install kdenlive -y
 echo "KDenLive Installed!"
 echo ""
 
@@ -77,7 +77,7 @@ echo ""
 echo "Installing OpenShot..."
 sudo apt-add-repository ppa:openshot.developers/libopenshot-daily -y
 sudo apt update -y
-sudo apt-get install openshot-qt -y
+sudo apt install openshot-qt -y
 echo "OpenShot Installed!"
 echo ""
 
@@ -85,7 +85,7 @@ echo ""
 echo "Installing Pinta..."
 sudo add-apt-repository ppa:pinta-maintainers/pinta-stable -y
 sudo apt update -y
-sudo apt-get install pinta -y
+sudo apt install pinta -y
 echo "Pinta Installed!"
 echo ""
 

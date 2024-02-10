@@ -21,7 +21,7 @@ sudo apt install gnome-shell-extension-manager -y
 sudo apt install chrome-gnome-shell -y
 
 # Gnome Extensions CLI:
-sudo apt-get install python3 python3-venv python3-pip -y
+sudo apt install python3 python3-venv python3-pip -y
 pip3 install --upgrade gnome-extensions-cli
 
 # List Gnome Extensions:

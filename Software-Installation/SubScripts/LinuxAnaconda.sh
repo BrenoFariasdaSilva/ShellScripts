@@ -10,7 +10,7 @@ ANACONDA_VERSION="2023.07-2"
 ANACONDA_INSTALLER="Anaconda3-${ANACONDA_VERSION}-Linux-x86_64.sh"
 ANACONDA_URL="https://repo.anaconda.com/archive/${ANACONDA_INSTALLER}"
 
-# sudo apt-get install libgl1-mesa-glx libegl1-mesa libxrandr2 libxrandr2 libxss1 libxcursor1 libxcomposite1 libasound2 libxi6 libxtst6 -y
+# sudo apt install libgl1-mesa-glx libegl1-mesa libxrandr2 libxrandr2 libxss1 libxcursor1 libxcomposite1 libasound2 libxi6 libxtst6 -y
 
 # Download Anaconda installer to Downloads folder
 wget -P ~/Downloads $ANACONDA_URL
@@ -81,4 +81,3 @@ rm ~/Downloads/${ANACONDA_INSTALLER}
 # sed -i "s|Icon=spyder|Icon=$ICON_DEST_SPYDER|" $DESKTOP_ENTRY_FILE_SPYDER
 
 # echo "Desktop entry created and icon added for Spyder."
-

@@ -17,14 +17,14 @@ echo ""
 # Alien - Convert .rpm to .deb:
 echo "Installing Alien RPM to DEB Converter..."
 sudo add-apt-repository universe -y
-sudo apt-get update -y
-sudo apt-get install alien -y
+sudo apt update -y
+sudo apt install alien -y
 echo "Alien RPM to DEB Converter Installed!"
 echo ""
 
 # Apitude:
 echo "Installing Aptitude..."
-sudo apt-get install aptitude -y
+sudo apt install aptitude -y
 echo "Aptitude Installed!"
 echo ""
 
@@ -63,16 +63,16 @@ cd ~/Downloads || return
 LATEST_RELEASE_INFO=$(curl -s https://api.github.com/repos/jgraph/drawio-desktop/releases/latest)
 # Extract the download URL for the latest .deb package
 DOWNLOAD_URL=$(echo "$LATEST_RELEASE_INFO" | grep "browser_download_url.*draw.io-amd64.*\.deb" | cut -d '"' -f 4)
-wget "$DOWNLOAD_URL" # Download the latest .deb package
+wget "$DOWNLOAD_URL"                 # Download the latest .deb package
 DEB_FILE=$(basename "$DOWNLOAD_URL") # Extract the file name from the download URL
-sudo dpkg -i "$DEB_FILE" # Install the downloaded package
-rm "$DEB_FILE" # Remove the .deb package after installation
+sudo dpkg -i "$DEB_FILE"             # Install the downloaded package
+rm "$DEB_FILE"                       # Remove the .deb package after installation
 echo "DrawIO Installed!"
 echo ""
 
 # GDebi:
 echo "Installing GDebi..."
-sudo apt-get install gdebi -y
+sudo apt install gdebi -y
 echo "GDebi Installed!"
 echo ""
 
@@ -99,7 +99,7 @@ echo ""
 
 # Gnome Extensions CLI:
 echo "Installing Gnome Extensions CLI..."
-sudo apt-get install python3 python3-venv python3-pip -y
+sudo apt install python3 python3-venv python3-pip -y
 pip3 install --upgrade gnome-extensions-cli
 echo "Gnome Extensions CLI Installed!"
 echo ""
@@ -136,7 +136,7 @@ echo ""
 
 # OCR Tesseract:
 echo "Installing OCR Tesseract..."
-sudo apt-get install tesseract-ocr-all -y
+sudo apt install tesseract-ocr-all -y
 echo "OCR Tesseract Installed!"
 echo ""
 
@@ -168,12 +168,12 @@ echo ""
 
 # Sublime:
 echo "Installing Sublime..."
-sudo apt-get install apt-transport-https -y
+sudo apt install apt-transport-https -y
 cd ~/Downloads || return
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/sublimehq-archive.gpg
 echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
 sudo apt update -y
-sudo apt-get install sublime-text -y
+sudo apt install sublime-text -y
 echo "Sublime Installed!"
 echo ""
 
@@ -185,14 +185,14 @@ echo ""
 
 # Vim:
 echo "Installing Vim..."
-sudo apt-get install vim -y
+sudo apt install vim -y
 echo "Vim Installed!"
 echo ""
 
 # VirtualBox:
 echo "Installing VirtualBox..."
 sudo apt install virtualbox -y
-sudo apt-get install virtualbox-guest-additions-iso -y
+sudo apt install virtualbox-guest-additions-iso -y
 sudo apt install build-essential dkms "linux-headers-$(uname -r)" -y
 echo "VirtualBox Installed!"
 echo ""

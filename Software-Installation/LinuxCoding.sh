@@ -32,16 +32,16 @@ else
    # This step is usually done by the SDKMAN installer, but we're making sure it's handled
    echo "Attempting to automatically source SDKMAN in shell profile..."
    if ! grep -qs "sdkman-init.sh" "$HOME/.bashrc"; then
-      echo -e "\n#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!" >> "$HOME/.bashrc"
-      echo "source \"$HOME/.sdkman/bin/sdkman-init.sh\"" >> "$HOME/.bashrc"
+      echo -e "\n#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!" >>"$HOME/.bashrc"
+      echo "source \"$HOME/.sdkman/bin/sdkman-init.sh\"" >>"$HOME/.bashrc"
       echo "Added SDKMAN source to .bashrc"
    else
       echo "SDKMAN already sourced in .bashrc"
    fi
 
    if ! grep -qs "sdkman-init.sh" "$HOME/.zshrc"; then
-      echo -e "\n#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!" >> "$HOME/.zshrc"
-      echo "source \"$HOME/.sdkman/bin/sdkman-init.sh\"" >> "$HOME/.zshrc"
+      echo -e "\n#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!" >>"$HOME/.zshrc"
+      echo "source \"$HOME/.sdkman/bin/sdkman-init.sh\"" >>"$HOME/.zshrc"
       echo "Added SDKMAN source to .zshrc"
    else
       echo "SDKMAN already sourced in .zshrc"
@@ -126,7 +126,7 @@ fi
 # Download and save the GPG key
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o "$GPG_KEY_FILE"
 # Add Docker repository
-echo "deb [arch=$(dpkg --print-architecture) signed-by=$GPG_KEY_FILE] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+echo "deb [arch=$(dpkg --print-architecture) signed-by=$GPG_KEY_FILE] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list >/dev/null
 # Update package lists to include Docker's repo
 sudo apt update -y
 # Install Docker Engine, CLI, and Containerd
@@ -134,7 +134,7 @@ sudo apt install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
 # Optionally, add your user to the docker group to run docker commands without sudo
 sudo groupadd docker
 sudo usermod -aG docker $USER
-sudo systemctl enable docker.service # Start Docker on boot
+sudo systemctl enable docker.service     # Start Docker on boot
 sudo systemctl enable containerd.service # Start Containerd on boot
 sudo docker run --rm hello-world
 sudo docker rmi hello-world
@@ -157,8 +157,8 @@ echo "Installing Insomnia..."
 echo "deb [trusted=yes arch=amd64] https://download.konghq.com/insomnia-ubuntu/ default all" | sudo tee /etc/apt/sources.list.d/insomnia.list
 # Use non-interactive frontend for apt and specify options to keep current config without prompting
 export DEBIAN_FRONTEND=noninteractive
-sudo apt-get update && sudo apt-get -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" upgrade
-sudo apt-get install -y insomnia
+sudo apt update && sudo apt -y -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" upgrade
+sudo apt install -y insomnia
 echo "Insomnia Installed!"
 echo ""
 
@@ -208,7 +208,7 @@ echo ""
 # MongoDB:
 echo "Installing MongoDB..."
 echo "deb http://security.ubuntu.com/ubuntu focal-security main" | sudo tee /etc/apt/sources.list.d/focal-security.list
-sudo apt-get update
+sudo apt update
 sudo apt install libssl1.1 -y
 rm libssl1.1_1.1.0g-2ubuntu4_amd64.deb
 sudo apt install mongodb-org -y
