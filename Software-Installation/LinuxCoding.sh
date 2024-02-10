@@ -23,13 +23,30 @@ echo ""
 # SDKMAN:
 echo "Installing SDKMAN..."
 if [ -d "$HOME/.sdkman" ]; then
-   echo "SDKMAN is already installed. Updating..."
-   source "$HOME/.sdkman/bin/sdkman-init.sh"
-   sdk selfupdate force
+   echo "SDKMAN is already installed"
 else
-   echo "Installing SDKMAN..."
    curl -s "https://get.sdkman.io" | bash
+   # Ensure SDKMAN is initialized for this script's execution
    source "$HOME/.sdkman/bin/sdkman-init.sh"
+   # It's also a good practice to ensure the shell profile sources SDKMAN for future sessions
+   # This step is usually done by the SDKMAN installer, but we're making sure it's handled
+   echo "Attempting to automatically source SDKMAN in shell profile..."
+   if ! grep -qs "sdkman-init.sh" "$HOME/.bashrc"; then
+      echo -e "\n#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!" >> "$HOME/.bashrc"
+      echo "source \"$HOME/.sdkman/bin/sdkman-init.sh\"" >> "$HOME/.bashrc"
+      echo "Added SDKMAN source to .bashrc"
+   else
+      echo "SDKMAN already sourced in .bashrc"
+   fi
+   
+   if ! grep -qs "sdkman-init.sh" "$HOME/.zshrc"; then
+      echo -e "\n#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!" >> "$HOME/.zshrc"
+      echo "source \"$HOME/.sdkman/bin/sdkman-init.sh\"" >> "$HOME/.zshrc"
+      echo "Added SDKMAN source to .zshrc"
+   else
+      echo "SDKMAN already sourced in .zshrc"
+   fi
+
    echo "SDKMAN Installed!"
 fi
 
