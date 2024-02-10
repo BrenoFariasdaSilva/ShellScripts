@@ -25,9 +25,14 @@ echo "Blender Installed!"
 # Franz - Messenger:
 echo "Installing Franz..."
 cd ~/Downloads || return
-wget https://github.com/meetfranz/franz/releases/download/v5.9.2/franz_5.9.2_amd64.deb
-sudo apt install ./franz_5.9.2_amd64.deb -y
-rm ./franz_5.9.2_amd64.deb
+# Fetch the latest release data from Franz GitHub repository
+LATEST_RELEASE_INFO=$(curl -s https://api.github.com/repos/meetfranz/franz/releases/latest)
+# Extract the download URL for the latest .deb package
+DOWNLOAD_URL=$(echo "$LATEST_RELEASE_INFO" | grep "browser_download_url.*deb" | cut -d '"' -f 4)
+wget "$DOWNLOAD_URL" # Download the .deb package
+DEB_FILE=$(basename "$DOWNLOAD_URL") # Extract the name of the downloaded .deb package
+sudo apt install "./$DEB_FILE" -y # Install the downloaded package
+rm "./$DEB_FILE" # Remove the downloaded package
 echo "Franz Installed!"
 
 # Gimp:
