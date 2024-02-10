@@ -87,7 +87,6 @@ EOD
 export PATH="/home/yourusername/.codon/bin:$PATH"
 echo "export PATH=/home/yourusername/.codon/bin:\$PATH" >>~/.bashrc
 echo "export PATH=/home/yourusername/.codon/bin:\$PATH" >>~/.zshrc
-
 echo "Codon Installed!"
 echo ""
 
