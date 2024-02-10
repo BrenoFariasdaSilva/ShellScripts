@@ -40,7 +40,7 @@ echo ""
 # C/C++:
 echo "Installing C/C++..."
 sudo apt install build-essential -y
-sudo apt-get install manpages-dev -y
+sudo apt install manpages-dev -y
 echo "C/C++ Installed!"
 echo ""
 
@@ -48,17 +48,17 @@ echo ""
 echo "Installing C#..."
 wget https://packages.microsoft.com/config/ubuntu/21.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
 sudo dpkg -i packages-microsoft-prod.deb
-sudo apt-get install -y gpg
+sudo apt install -y gpg
 wget -O - https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor -o microsoft.asc.gpg
 sudo mv microsoft.asc.gpg /etc/apt/trusted.gpg.d/
 wget https://packages.microsoft.com/config/ubuntu/22.04/prod.list
 sudo mv prod.list /etc/apt/sources.list.d/microsoft-prod.list
 sudo chown root:root /etc/apt/trusted.gpg.d/microsoft.asc.gpg
 sudo chown root:root /etc/apt/sources.list.d/microsoft-prod.list
-sudo apt-get update
-sudo apt-get install -y apt-transport-https &&
-  sudo apt-get update &&
-  sudo apt-get install -y dotnet-sdk-6.0
+sudo apt update
+sudo apt install -y apt-transport-https &&
+  sudo apt update &&
+  sudo apt install -y dotnet-sdk-6.0
 rm packages-microsoft-prod.deb
 echo "C# Installed!"
 echo ""
@@ -93,7 +93,7 @@ echo ""
 # Docker:
 echo "Installing Docker..."
 sudo apt update -y
-sudo apt-get install \
+sudo apt install \
   apt-transport-https \
   ca-certificates \
   curl \
@@ -104,7 +104,7 @@ echo \
   "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian \
   $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list >/dev/null
 sudo apt update -y
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y
+sudo apt install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y
 sudo groupadd docker
 sudo usermod -aG docker "$USER"
 sudo apt get install docker -y
@@ -133,7 +133,7 @@ echo "Installing Insomnia..."
 echo "deb [trusted=yes arch=amd64] https://download.konghq.com/insomnia-ubuntu/ default all" |
   sudo tee -a /etc/apt/sources.list.d/insomnia.list
 sudo apt update && sudo apt upgrade -y
-sudo apt-get install insomnia -y
+sudo apt install insomnia -y
 echo "Insomnia Installed!"
 echo ""
 
@@ -146,7 +146,7 @@ echo ""
 
 # Python:
 echo "Installing Python..."
-sudo apt-get install python3 python3-venv python3-pip -y
+sudo apt install python3 python3-venv python3-pip -y
 sudo apt install python-is-python3
 echo "Python Installed!"
 echo ""
@@ -195,7 +195,7 @@ echo ""
 
 # Mono CSharp:
 echo "Installing Mono CSharp..."
-sudo apt-get install -y mono-mcs
+sudo apt install -y mono-mcs
 echo "Mono CSharp Installed!"
 echo ""
 
@@ -219,8 +219,8 @@ echo ""
 
 # OpenGL:
 echo "Installing OpenGL..."
-sudo apt-get install freeglut3 freeglut3-dev libglew-dev -y
-sudo apt-get install mesa-utils -y
+sudo apt install freeglut3 freeglut3-dev libglew-dev -y
+sudo apt install mesa-utils -y
 echo "OpenGL Installed!"
 echo ""
 
