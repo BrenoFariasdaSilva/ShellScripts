@@ -81,6 +81,7 @@ echo ""
 echo "Installing Expect..."
 sudo apt install expect -y
 echo "Expect Installed!"
+echo ""
 
 # Firefox:
 echo "Removing Old Firefox (Ubuntu Snap)..."
