@@ -23,14 +23,14 @@ echo ""
 # SDKMAN:
 echo "Installing SDKMAN..."
 if [ -d "$HOME/.sdkman" ]; then
-  echo "SDKMAN is already installed. Updating..."
-  source "$HOME/.sdkman/bin/sdkman-init.sh"
-  sdk selfupdate force
+   echo "SDKMAN is already installed. Updating..."
+   source "$HOME/.sdkman/bin/sdkman-init.sh"
+   sdk selfupdate force
 else
-  echo "Installing SDKMAN..."
-  curl -s "https://get.sdkman.io" | bash
-  source "$HOME/.sdkman/bin/sdkman-init.sh"
-  echo "SDKMAN Installed!"
+   echo "Installing SDKMAN..."
+   curl -s "https://get.sdkman.io" | bash
+   source "$HOME/.sdkman/bin/sdkman-init.sh"
+   echo "SDKMAN Installed!"
 fi
 
 sdk version
@@ -57,8 +57,8 @@ sudo chown root:root /etc/apt/trusted.gpg.d/microsoft.asc.gpg
 sudo chown root:root /etc/apt/sources.list.d/microsoft-prod.list
 sudo apt update
 sudo apt install -y apt-transport-https &&
-  sudo apt update &&
-  sudo apt install -y dotnet-sdk-6.0
+   sudo apt update &&
+   sudo apt install -y dotnet-sdk-6.0
 rm packages-microsoft-prod.deb
 echo "C# Installed!"
 echo ""
@@ -92,29 +92,35 @@ echo ""
 
 # Docker:
 echo "Installing Docker..."
+sudo apt update -y # Update package lists
+# Install prerequisites
+sudo apt install -y \
+   apt-transport-https \
+   ca-certificates \
+   curl \
+   gnupg \
+   lsb-release
+# Remove existing GPG key file if it exists to prevent the overwrite prompt
+GPG_KEY_FILE='/usr/share/keyrings/docker-archive-keyring.gpg'
+if [ -f "$GPG_KEY_FILE" ]; then
+   echo "Removing existing GPG key file: $GPG_KEY_FILE"
+   sudo rm -f "$GPG_KEY_FILE"
+fi
+# Download and save the GPG key
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o "$GPG_KEY_FILE"
+# Add Docker repository
+echo "deb [arch=$(dpkg --print-architecture) signed-by=$GPG_KEY_FILE] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+# Update package lists to include Docker's repo
 sudo apt update -y
-sudo apt install \
-  apt-transport-https \
-  ca-certificates \
-  curl \
-  gnupg \
-  lsb-release
-curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
-echo \
-  "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian \
-  $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list >/dev/null
-sudo apt update -y
-sudo apt install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y
+# Install Docker Engine, CLI, and Containerd
+sudo apt install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
+# Optionally, add your user to the docker group to run docker commands without sudo
 sudo groupadd docker
-sudo usermod -aG docker "$USER"
-sudo apt get install docker -y
-sudo apt install docker.io -y
-sudo curl -L "https://github.com/docker/compose/releases/download/1.23.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-sudo chmod +x /usr/local/bin/docker-compose
-sudo docker run --name hello-world-container hello-world
-sudo systemctl enable docker.service
-sudo systemctl enable containerd.service
-sudo docker rm hello-world-container
+sudo usermod -aG docker $USER
+sudo systemctl enable docker.service # Start Docker on boot
+sudo systemctl enable containerd.service # Start Containerd on boot
+sudo docker run --rm hello-world
+sudo docker rmi hello-world
 echo "Docker Installed!"
 echo ""
 
@@ -131,7 +137,7 @@ echo ""
 # Insomnia:
 echo "Installing Insomnia..."
 echo "deb [trusted=yes arch=amd64] https://download.konghq.com/insomnia-ubuntu/ default all" |
-  sudo tee -a /etc/apt/sources.list.d/insomnia.list
+   sudo tee -a /etc/apt/sources.list.d/insomnia.list
 sudo apt update && sudo apt upgrade -y
 sudo apt install insomnia -y
 echo "Insomnia Installed!"
