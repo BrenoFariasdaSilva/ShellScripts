@@ -188,7 +188,7 @@ echo ""
 
 # Kotlin:
 echo "Installing Kotlin..."
-sdk install kotlin
+bash -c "source $HOME/.sdkman/bin/sdkman-init.sh && sdk install kotlin"
 kotlin -version
 echo "Kotlin Installed!"
 echo ""
