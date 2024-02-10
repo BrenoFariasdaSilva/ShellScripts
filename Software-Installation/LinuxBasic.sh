@@ -11,6 +11,8 @@ echo "System Updated!"
 echo ""
 
 #---Basic Softwares---#
+echo "Installing Linux Basic Softwares..."
+echo ""
 
 # Curl:
 echo "Installing Curl..."

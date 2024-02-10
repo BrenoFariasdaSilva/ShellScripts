@@ -11,7 +11,7 @@ echo "System Updated!"
 echo ""
 
 #---Tools Softwares---#
-echo "Installing Tools Softwares..."
+echo "Installing Linux Tools Softwares..."
 echo ""
 
 # Alien - Convert .rpm to .deb:

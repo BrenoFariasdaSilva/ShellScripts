@@ -11,6 +11,8 @@ echo "System Updated!"
 echo ""
 
 #---Media Softwares---#
+echo "Installing Linux Media Softwares..."
+echo ""
 
 # Audacity:
 echo "Installing Audacity..."

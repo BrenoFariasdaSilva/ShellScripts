@@ -11,6 +11,8 @@ echo "System Updated!"
 echo ""
 
 #---Coding Softwares---#
+echo "Installing Linux Coding Softwares..."
+echo ""
 
 # ASDF:
 echo "Installing ASDF..."
