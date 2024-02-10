@@ -19,6 +19,11 @@ sudo apt update -y
 sudo apt install lutris -y
 echo "Lutris Installed!"
 
+# PlayOnLinux:
+echo "Installing PlayOnLinux..."
+sudo apt install playonlinux -y
+echo "PlayOnLinux Installed!"
+
 # Steam:
 echo "Installing Steam..."
 sudo add-apt-repository multiverse -y
