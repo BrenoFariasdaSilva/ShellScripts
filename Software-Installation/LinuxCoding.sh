@@ -178,11 +178,11 @@ echo "Python Installed!"
 echo ""
 
 # Jupyter using Pip
-echo "Installing Jupyter..."
-pip install jupyterlab -y
-pip install notebook -y
-pip install ipykernel -y
 # Launch: jupyter-lab or jupyter notebook in terminal
+echo "Installing Jupyter..."
+python3 -m pip install jupyterlab
+python3 -m pip install notebook
+python3 -m pip install ipykernel
 echo "Jupyter Installed!"
 echo ""
 
