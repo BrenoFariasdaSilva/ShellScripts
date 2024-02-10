@@ -5,44 +5,46 @@
 # sudo ./LinuxBasic.sh
 
 # Update commands:
+echo "Updating System..."
 sudo apt update -y
+echo "System Updated!"
 
 #---Basic Softwares---#
 
 # Curl:
 echo "Installing Curl..."
 sudo apt install curl -y
-echo ""
+echo "Curl Installed!"
 
 # WGet:
 echo "Installing WGet..."
 sudo apt install wget -y
-echo ""
+echo "WGet Installed!"
 
 # Git:
 echo "Installing Git..."
 sudo apt-get install git -y
-echo ""
+echo "Git Installed!"
 
 # DPKG:
 echo "Installing DPKG..."
 sudo apt-get install dpkg -y
-echo ""
+echo "DPKG Installed!"
 
 # 7Zip:
 echo "Installing 7Zip..."
 sudo apt-get install p7zip-full -y
-echo ""
+echo "7Zip Installed!"
 
 # Unzip:
 echo "Installing Unzip..."
 sudo apt-get install unzip -y
-echo ""
+echo "Unzip Installed!"
 
 # Zip:
 echo "Installing Zip..."
 sudo apt-get install zip -y
-echo ""
+echo "Zip Installed!"
 
 # Brave Browser:
 echo "Installing Brave Browser..."
@@ -51,25 +53,27 @@ curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt
 echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
 sudo apt update -y
 sudo apt install brave-browser -y
-echo ""
+echo "Brave Browser Installed!"
 
 # Cron Job:
 echo "Installing Cron Job..."
 sudo apt-get install cron -y
 # CronJobs File Location: nano /etc/crontab
-echo ""
+echo "Cron Job Installed!"
 
 # Directory Tree:
 echo "Installing Directory Tree..."
 sudo apt install tree -y
-echo ""
+echo "Directory Tree Installed!"
 
 # Firefox:
+echo "Removing Old Firefox (Ubuntu Snap)..."
+sudo snap remove --purge firefox
 echo "Installing Firefox..."
 sudo add-apt-repository ppa:ubuntu-mozilla-security/ppa -y
 sudo apt update -y
 sudo apt install firefox -y
-echo ""
+echo "Firefox Installed!"
 
 # Google Chrome:
 echo "Installing Google Chrome..."
@@ -82,14 +86,14 @@ echo ""
 # HTop:
 echo "Installing HTop..."
 sudo apt install htop -y
-echo ""
+echo "HTop Installed!"
 
 # LibreOffice:
 echo "Installing LibreOffice..."
 sudo add-apt-repository ppa:libreoffice/ppa -y
 sudo apt update -y
 sudo apt install libreoffice -y
-echo ""
+echo "LibreOffice Installed!"
 
 # Microsoft Edge:
 echo "Installing Microsoft Edge..."
@@ -99,18 +103,20 @@ sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/edge sta
 sudo rm microsoft.gpg
 sudo apt update -y
 sudo apt install microsoft-edge-stable -y
-echo ""
+echo "Microsoft Edge Installed!"
 
 # QBittorrent:
 echo "Installing QBittorrent..."
 sudo add-apt-repository ppa:qbittorrent-team/qbittorrent-stable -y
 sudo apt update -y
 sudo apt install qbittorrent -y
-echo ""
+echo "QBittorrent Installed!"
 
 # SpeedTest CLI:
 echo "Installing SpeedTest CLI..."
 sudo apt-get install curl -y
 curl -s https://packagecloud.io/install/repositories/ookla/speedtest-cli/script.deb.sh | sudo bash
 sudo apt-get install speedtest -y
-echo ""
+echo "SpeedTest CLI Installed!"
+
+echo "All Basic Softwares Installed!"
