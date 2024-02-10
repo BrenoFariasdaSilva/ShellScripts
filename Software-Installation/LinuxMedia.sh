@@ -16,11 +16,13 @@ echo ""
 echo "Installing Audacity..."
 sudo apt install audacity -y
 echo "Audacity Installed!"
+echo ""
 
 # Blender:
 echo "Installing Blender..."
 sudo apt install blender -y
 echo "Blender Installed!"
+echo ""
 
 # Franz - Messenger:
 echo "Installing Franz..."
@@ -34,11 +36,13 @@ DEB_FILE=$(basename "$DOWNLOAD_URL") # Extract the name of the downloaded .deb p
 sudo apt install "./$DEB_FILE" -y # Install the downloaded package
 rm "./$DEB_FILE" # Remove the downloaded package
 echo "Franz Installed!"
+echo ""
 
 # Gimp:
 echo "Installing Gimp..."
 sudo apt install gimp -y
 echo "Gimp Installed!"
+echo ""
 
 # KDenLive Video Editor:
 echo "Installing KDenLive..."
@@ -46,6 +50,7 @@ sudo add-apt-repository ppa:kdenlive/kdenlive-stable -y
 sudo apt update -y
 sudo apt-get install kdenlive -y
 echo "KDenLive Installed!"
+echo ""
 
 # MegaSync:
 echo "Installing MegaSync..."
@@ -54,16 +59,19 @@ wget https://mega.nz/linux/repo/xUbuntu_22.04/amd64/megasync-xUbuntu_22.04_amd64
 sudo apt install ./megasync-xUbuntu_22.04_amd64.deb -y
 rm ./megasync-xUbuntu_22.04_amd64.deb
 echo "MegaSync Installed!"
+echo ""
 
 # MPV:
 echo "Installing MPV..."
 sudo apt install mpv -y
 echo "MPV Installed!"
+echo ""
 
 # OBS Studio:
 echo "Installing OBS Studio..."
 sudo apt install obs-studio -y
 echo "OBS Studio Installed!"
+echo ""
 
 # OpenShot Video Editor:
 echo "Installing OpenShot..."
@@ -71,6 +79,7 @@ sudo apt-add-repository ppa:openshot.developers/libopenshot-daily -y
 sudo apt update -y
 sudo apt-get install openshot-qt -y
 echo "OpenShot Installed!"
+echo ""
 
 # Pinta:
 echo "Installing Pinta..."
@@ -78,6 +87,7 @@ sudo add-apt-repository ppa:pinta-maintainers/pinta-stable -y
 sudo apt update -y
 sudo apt-get install pinta -y
 echo "Pinta Installed!"
+echo ""
 
 # Skype:
 echo "Installing Skype..."
@@ -86,11 +96,13 @@ wget https://go.skype.com/skypeforlinux-64.deb
 sudo apt install ./skypeforlinux-64.deb -y
 rm ./skypeforlinux-64.deb
 echo "Skype Installed!"
+echo ""
 
 # VLC:
 echo "Installing VLC..."
 sudo apt install vlc -y
 echo "VLC Installed!"
+echo ""
 
 echo "Media Softwares Installed!"
 echo ""
