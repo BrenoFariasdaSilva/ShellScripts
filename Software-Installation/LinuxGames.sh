@@ -18,11 +18,13 @@ sudo add-apt-repository ppa:lutris-team/lutris -y
 sudo apt update -y
 sudo apt install lutris -y
 echo "Lutris Installed!"
+echo ""
 
 # PlayOnLinux:
 echo "Installing PlayOnLinux..."
 sudo apt install playonlinux -y
 echo "PlayOnLinux Installed!"
+echo ""
 
 # Steam:
 echo "Installing Steam..."
@@ -30,6 +32,7 @@ sudo add-apt-repository multiverse -y
 sudo apt update -y
 sudo apt install steam -y
 echo "Steam Installed!"
+echo ""
 
 # Wine:
 echo "Installing Wine..."
@@ -39,6 +42,7 @@ sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ hirsute m
 sudo apt update -y
 sudo apt install --install-recommends winehq-stable -y
 echo "Wine Installed!"
+echo ""
 
 echo "Games Softwares Installed!"
 echo ""
