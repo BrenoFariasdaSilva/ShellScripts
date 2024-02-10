@@ -26,31 +26,31 @@ echo ""
 
 # Git:
 echo "Installing Git..."
-sudo apt-get install git -y
+sudo apt install git -y
 echo "Git Installed!"
 echo ""
 
 # DPKG:
 echo "Installing DPKG..."
-sudo apt-get install dpkg -y
+sudo apt install dpkg -y
 echo "DPKG Installed!"
 echo ""
 
 # 7Zip:
 echo "Installing 7Zip..."
-sudo apt-get install p7zip-full -y
+sudo apt install p7zip-full -y
 echo "7Zip Installed!"
 echo ""
 
 # Unzip:
 echo "Installing Unzip..."
-sudo apt-get install unzip -y
+sudo apt install unzip -y
 echo "Unzip Installed!"
 echo ""
 
 # Zip:
 echo "Installing Zip..."
-sudo apt-get install zip -y
+sudo apt install zip -y
 echo "Zip Installed!"
 echo ""
 
@@ -66,7 +66,7 @@ echo ""
 
 # Cron Job:
 echo "Installing Cron Job..."
-sudo apt-get install cron -y
+sudo apt install cron -y
 # CronJobs File Location: nano /etc/crontab
 echo "Cron Job Installed!"
 echo ""
@@ -76,6 +76,11 @@ echo "Installing Directory Tree..."
 sudo apt install tree -y
 echo "Directory Tree Installed!"
 echo ""
+
+# Expect:
+echo "Installing Expect..."
+sudo apt install expect -y
+echo "Expect Installed!"
 
 # Firefox:
 echo "Removing Old Firefox (Ubuntu Snap)..."
@@ -132,9 +137,9 @@ echo ""
 
 # SpeedTest CLI:
 echo "Installing SpeedTest CLI..."
-sudo apt-get install curl -y
+sudo apt install curl -y
 curl -s https://packagecloud.io/install/repositories/ookla/speedtest-cli/script.deb.sh | sudo bash
-sudo apt-get install speedtest -y
+sudo apt install speedtest -y
 echo "SpeedTest CLI Installed!"
 echo ""
 
