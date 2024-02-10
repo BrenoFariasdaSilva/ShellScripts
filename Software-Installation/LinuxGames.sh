@@ -31,5 +31,14 @@ sudo apt update -y
 sudo apt install steam -y
 echo "Steam Installed!"
 
+# Wine:
+echo "Installing Wine..."
+sudo dpkg --add-architecture i386
+wget -qO - https://dl.winehq.org/wine-builds/winehq.key | sudo apt-key add -
+sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ hirsute main' -y
+sudo apt update -y
+sudo apt install --install-recommends winehq-stable -y
+echo "Wine Installed!"
+
 echo "Games Softwares Installed!"
 echo ""
