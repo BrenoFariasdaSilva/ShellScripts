@@ -12,6 +12,8 @@ echo "System Updated!"
 echo ""
 
 #---Snap Softwares---#
+echo "Installing Linux Snap Softwares..."
+echo ""
 
 # Snapd:
 echo "Installing Snapd..."

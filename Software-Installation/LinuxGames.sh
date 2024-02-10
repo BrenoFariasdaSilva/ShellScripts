@@ -11,6 +11,8 @@ echo "System Updated!"
 echo ""
 
 #---Games Softwares---#
+echo "Installing Linux Games Softwares..."
+echo ""
 
 # Lutris:
 echo "Installing Lutris..."
