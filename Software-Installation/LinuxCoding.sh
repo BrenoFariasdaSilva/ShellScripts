@@ -247,9 +247,17 @@ echo ""
 
 # PgAdmin:
 echo "Installing PgAdmin..."
-curl -fsSL https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/pgadmin.gpg
+GPG_KEY_PATH="/etc/apt/trusted.gpg.d/pgadmin.gpg"
+# Check if the GPG key already exists
+if [ -f "$GPG_KEY_PATH" ]; then
+   echo "$GPG_KEY_PATH exists. Skipping GPG key addition."
+else
+   echo "Adding GPG key for PgAdmin..."
+   curl -fsSL https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo gpg --dearmor -o "$GPG_KEY_PATH"
+fi
+
 sudo sh -c 'echo "deb https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/$(lsb_release -cs) pgadmin4 main" > /etc/apt/sources.list.d/pgadmin4.list'
-sudo apt update
+sudo apt update -y
 sudo apt install pgadmin4-desktop -y
 sudo apt install pgadmin4-web -y
 sudo apt install pgadmin4 -y
