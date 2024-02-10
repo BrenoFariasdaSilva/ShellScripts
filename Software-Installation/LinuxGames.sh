@@ -4,10 +4,6 @@
 # chmod +x LinuxGames.sh
 # sudo ./LinuxGames.sh
 
-# Open terminal as root:
-# sudo -i
-sudo su
-
 # Update commands:
 sudo apt update -y
 

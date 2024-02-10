@@ -4,10 +4,6 @@
 # chmod +x LinuxMedia.sh
 # sudo ./LinuxMedia.sh
 
-# Open terminal as root:
-# sudo -i
-sudo su
-
 # Update commands:
 sudo apt update -y
 
@@ -47,7 +43,7 @@ sudo apt install obs-studio -y
 
 # OpenShot Video Editor:
 sudo apt-add-repository ppa:openshot.developers/libopenshot-daily -y
-sudo apt update -y 
+sudo apt update -y
 sudo apt-get install openshot-qt -y
 
 # Pinta:

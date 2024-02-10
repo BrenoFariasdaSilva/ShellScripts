@@ -4,10 +4,6 @@
 # chmod +x LinuxTools.sh
 # sudo ./LinuxTools.sh
 
-# Open terminal as root:
-# sudo -i
-sudo su
-
 # Update commands:
 sudo apt update -y
 
