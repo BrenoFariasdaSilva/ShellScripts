@@ -164,7 +164,7 @@ echo ""
 
 # Java:
 echo "Installing Java..."
-sdk install java
+bash -c "source $HOME/.sdkman/bin/sdkman-init.sh && sdk install java"
 java -version
 echo "Java Installed!"
 echo ""
