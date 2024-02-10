@@ -11,7 +11,7 @@ echo "System Updated!"
 echo ""
 
 #---Tools Softwares---#
-echo "Installing Tools Softwares..."
+echo "Installing Linux Tools Softwares..."
 echo ""
 
 # Alien - Convert .rpm to .deb:
@@ -59,14 +59,12 @@ echo ""
 # DrawIO:
 echo "Installing DrawIO..."
 cd ~/Downloads || return
-# Fetch the latest release data from DrawIO GitHub repository
-LATEST_RELEASE_INFO=$(curl -s https://api.github.com/repos/jgraph/drawio-desktop/releases/latest)
-# Extract the download URL for the latest .deb package
-DOWNLOAD_URL=$(echo "$LATEST_RELEASE_INFO" | grep "browser_download_url.*draw.io-amd64.*\.deb" | cut -d '"' -f 4)
-wget "$DOWNLOAD_URL"                 # Download the latest .deb package
+LATEST_RELEASE_INFO=$(curl -s https://api.github.com/repos/jgraph/drawio-desktop/releases/latest) # Fetch the latest release data from DrawIO GitHub repository
+DOWNLOAD_URL=$(echo "$LATEST_RELEASE_INFO" | grep "browser_download_url.*drawio-amd64.*\.deb" | cut -d '"' -f 4) # Extract the download URL for the latest .deb package
+wget "$DOWNLOAD_URL" # Download the latest .deb package
 DEB_FILE=$(basename "$DOWNLOAD_URL") # Extract the file name from the download URL
-sudo dpkg -i "$DEB_FILE"             # Install the downloaded package
-rm "$DEB_FILE"                       # Remove the .deb package after installation
+sudo dpkg -i "$DEB_FILE" # Install the downloaded package
+rm "$DEB_FILE" # Remove the .deb package after installation
 echo "DrawIO Installed!"
 echo ""
 
