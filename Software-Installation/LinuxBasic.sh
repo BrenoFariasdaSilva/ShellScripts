@@ -56,6 +56,10 @@ sudo apt install zip -y
 echo "Zip Installed!"
 echo ""
 
+# Run the SubScript/AppImagesLauncher.sh:
+echo "Installing the AppImageLauncher..."
+sudo ./SubScripts/AppImagesLauncher.sh
+
 # Brave Browser:
 echo "Installing Brave Browser..."
 sudo apt install apt-transport-https curl gnupg -y
