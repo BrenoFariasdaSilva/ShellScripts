@@ -7,7 +7,9 @@
 # Check if GNOME Terminal is installed
 if ! command -v gnome-terminal &> /dev/null; then
 	echo "GNOME Terminal is not installed on your system."
-	exit 1
+	echo "Installing GNOME Terminal..."
+	sudo apt install gnome-terminal -y
+	echo "GNOME Terminal has been installed."
 fi
 
 # Define the custom keyboard shortcuts for GNOME Terminal
