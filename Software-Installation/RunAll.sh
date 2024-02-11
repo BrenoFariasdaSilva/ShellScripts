@@ -6,7 +6,6 @@
 
 # Update system
 full_system_update() {
-   update_package_list      # Call the update_package_list function to update the package list
    echo "Upgrading System..."
    sudo apt dist-upgrade -y # Install updates
    sudo apt full-upgrade -y # Full upgrade
@@ -67,10 +66,9 @@ run_scripts() {
    echo ""
 }
 
-# Run all SubScripts
+# Run all ShellScript SubScripts
 run_sub_scripts() {
    echo "Running SubScripts..."
-   echo "Running the LinuxAndroidStudio SubScript..."
    ./SubScripts/BetterDiscord.sh   # Run BetterDiscord.sh
    ./SubScripts/GnomeExtensions.sh # Run LinuxAndroidStudio.sh
    ./SubScripts/LinuxAnaconda.sh   # Run LinuxAnaconda.sh
@@ -78,7 +76,8 @@ run_sub_scripts() {
 
 # Run all functions
 echo "Running All Functions..."
-full_system_update # Call the full_system_update function to update the system
+update_package_list # Call the update_package_list function to update the package list
+# full_system_update # Call the full_system_update function to update the system
 grant_permissions # Call the grant_permissions function to grant execution permissions
 run_scripts # Call the run_scripts function to run all ShellScripts
 run_sub_scripts # Call the run_sub_scripts function to run all SubScripts
