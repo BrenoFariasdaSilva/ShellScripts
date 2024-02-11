@@ -82,12 +82,23 @@ run_sub_scripts() {
    echo "SubScripts Executed!"
 }
 
+# Run all Manual ShellScript SubScripts
+run_manual_sub_scripts() {
+   echo "Running Manual SubScripts..."
+
+   echo "Running the BitWarden ShellScript SubScript..."
+   ./SubScripts/Manual/BitWarden.sh # Run BitWarden.sh
+
+   echo "Manual SubScripts Executed!"
+}
+
 # Run all functions
 echo "Running All Functions..."
 update_package_list # Call the update_package_list function to update the package list
 # full_system_update # Call the full_system_update function to update the system
-# grant_permissions # Call the grant_permissions function to grant execution permissions
-# run_main_scripts # Call the run_scripts function to run all ShellScripts
+grant_permissions # Call the grant_permissions function to grant execution permissions
+run_main_scripts # Call the run_scripts function to run all ShellScripts
 run_sub_scripts # Call the run_sub_scripts function to run all SubScripts
+run_manual_sub_scripts # Call the run_manual_sub_scripts function to run all Manual SubScripts
 update_package_list # Call the update_package_list function to update the package list
 echo "System Updated and ShellScripts Executed!"
