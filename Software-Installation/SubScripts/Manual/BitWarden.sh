@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Installing the latest version of Bitwarden Desktop..."
+echo "Installing the latest version of BitWarden Desktop..."
 
 # Define the GitHub API URL for Bitwarden clients releases
 GITHUB_API_URL="https://api.github.com/repos/bitwarden/clients/releases"
@@ -39,9 +39,8 @@ if command -v AppImageLauncher &>/dev/null; then
 	AppImageLauncher "$FILENAME"
 else
 	echo "AppImageLauncher is not installed. Manual integration is required."
-	# Manual integration steps (optional) or message to notify the user.
 fi
 
-rm "$FILENAME"
+rm "$FILENAME" # Remove the AppImage
 
-echo "Bitwarden Desktop installation complete."
+echo "BitWarden Desktop installation complete."
