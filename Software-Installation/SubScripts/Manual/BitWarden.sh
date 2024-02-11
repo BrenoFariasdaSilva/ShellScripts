@@ -42,4 +42,6 @@ else
 	# Manual integration steps (optional) or message to notify the user.
 fi
 
+rm "$FILENAME"
+
 echo "Bitwarden Desktop installation complete."
