@@ -30,7 +30,7 @@ grant_permissions() {
 }
 
 # Run all ShellScripts
-run_scripts() {
+run_main_scripts() {
    echo "Running ShellScripts..."
    echo "Running the LinuxBasic ShellScript..."
    ./LinuxBasic.sh # Run LinuxBasic.sh
@@ -85,9 +85,9 @@ run_sub_scripts() {
 # Run all functions
 echo "Running All Functions..."
 update_package_list # Call the update_package_list function to update the package list
-# full_system_update # Call the full_system_update function to update the system
+full_system_update # Call the full_system_update function to update the system
 grant_permissions # Call the grant_permissions function to grant execution permissions
-run_scripts # Call the run_scripts function to run all ShellScripts
+run_main_scripts # Call the run_scripts function to run all ShellScripts
 run_sub_scripts # Call the run_sub_scripts function to run all SubScripts
 update_package_list # Call the update_package_list function to update the package list
 echo "System Updated and ShellScripts Executed!"
