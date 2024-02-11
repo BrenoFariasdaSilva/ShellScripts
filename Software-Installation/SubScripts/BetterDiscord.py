@@ -1,6 +1,8 @@
 import os # Import the os module to create the destination directories
 import requests # Import the requests module to download the files
 
+print("Running BetterDiscord.py")
+
 # Define the destination directories
 theme_destination_dir = os.path.expanduser("~/.config/BetterDiscord/themes")
 plugin_destination_dir = os.path.expanduser("~/.config/BetterDiscord/plugins")
@@ -72,6 +74,9 @@ def main():
 
 	# Print a message to indicate that the script has completed
 	print("The BetterDiscord Plugins and Themes have been downloaded and moved successfully!")
+
+	# Print a message to indicate that the script has finished running
+	print("Finished running BetterDiscord.py")
 
 # This is the standard boilerplate that calls the main() function.
 if __name__ == "__main__":
