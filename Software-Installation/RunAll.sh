@@ -76,12 +76,11 @@ run_sub_scripts() {
    ./SubScripts/LinuxAnaconda.sh   # Run LinuxAnaconda.sh
 }
 
-echo "Running All Functions..."
 # Run all functions
-full_system_update
-grant_permissions
-run_scripts
-run_sub_scripts
-update_package_list
-
+echo "Running All Functions..."
+full_system_update # Call the full_system_update function to update the system
+grant_permissions # Call the grant_permissions function to grant execution permissions
+run_scripts # Call the run_scripts function to run all ShellScripts
+run_sub_scripts # Call the run_sub_scripts function to run all SubScripts
+update_package_list # Call the update_package_list function to update the package list
 echo "System Updated and ShellScripts Run!"
