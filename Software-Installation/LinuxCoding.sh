@@ -348,7 +348,7 @@ sudo apt install zsh -y
 chsh -s $(which zsh)                                                                                                                  # Change the default shell to ZSH
 sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"                                                   # Install Oh My ZSH
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions             # Install ZSH Autosuggestions
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k          # Install PowerLevel10K ZSH Theme                                            # Install Powerlevel10k
+git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k                                               # Install PowerLevel10K ZSH Theme                                            # Install Powerlevel10k
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting # Install ZSH Syntax Highlighting
 exec zsh                                                                                                                              # Restart ZSH
 echo "ZSH Installed!"
