@@ -345,12 +345,20 @@ echo ""
 # ZSH:
 echo "Installing ZSH..."
 sudo apt install zsh -y
-chsh -s $(which zsh)                                                                                                                  # Change the default shell to ZSH
+echo "Setting ZSH as the default shell..."
+chsh -s $(which zsh) # Change the default shell to ZSH
+echo "Installing Oh My ZSH..."
 sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"                                                   # Install Oh My ZSH
+echo "Installing ZSH Plugins..."
+echo "Installing ZSH Autosuggestions..."
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions             # Install ZSH Autosuggestions
-git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k                                               # Install PowerLevel10K ZSH Theme                                            # Install Powerlevel10k
+echo "Installing ZSH Syntax Highlighting..."
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting # Install ZSH Syntax Highlighting
-exec zsh                                                                                                                              # Restart ZSH
+echo "Installing ZSH Themes..."
+echo "Installing PowerLevel10K..."
+git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k                                               # Install PowerLevel10K ZSH Theme                                            # Install Powerlevel10k
+echo "Restarting ZSH..."
+exec zsh             
 echo "ZSH Installed!"
 
 echo "Coding Softwares Installed!"
