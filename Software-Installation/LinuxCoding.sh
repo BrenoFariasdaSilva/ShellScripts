@@ -96,16 +96,16 @@ set timeout -1
 spawn /bin/bash -c "$(curl -fsSL https://exaloop.io/install.sh)"
 
 # Look for the prompt and respond with 'y'
-expect "Update PATH in /home/yourusername/.profile? [y/n]"
+expect "Update PATH in /home/$USER/.profile? [y/n]"
 send -- "y\r"
 
 expect eof
 EOD
 
 # Update the PATH directly assuming the installation script completes successfully
-export PATH="/home/yourusername/.codon/bin:$PATH"
-echo "export PATH=/home/yourusername/.codon/bin:\$PATH" >>~/.bashrc
-echo "export PATH=/home/yourusername/.codon/bin:\$PATH" >>~/.zshrc
+export PATH="/home/$USER/.codon/bin:$PATH"
+echo "export PATH=/home/$USER/.codon/bin:\$PATH" >>~/.bashrc
+echo "export PATH=/home/$USER/.codon/bin:\$PATH" >>~/.zshrc
 echo "Codon Installed!"
 echo ""
 
