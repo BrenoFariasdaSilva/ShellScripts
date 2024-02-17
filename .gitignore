@@ -3,5 +3,8 @@
 
 # System Files
 .DS_Store
+*/.DS_Store
 Thumbs.db
+*/Thumbs.db
 desktop.ini
+*/desktop.ini
