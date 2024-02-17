@@ -1,8 +1,8 @@
 #!/bin/sh
 
 # Run:
-# chmod +x ./KeyboardShortcuts.sh
-# sudo ./KeyboardShortcuts.sh
+# chmod +x ./NautilusKeyboardShortcuts.sh
+# sudo ./NautilusKeyboardShortcuts.sh
 
 echo "Setting Nautilus Keyboard Shortcuts..."
 

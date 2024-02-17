@@ -1,10 +1,10 @@
 #!/bin/sh
 
 # Run:
-# chmod +x ./Bash.sh
-# sudo ./Bash.sh
+# chmod +x ./TerminalKeyboardShortcuts.sh
+# sudo ./TerminalKeyboardShortcuts.sh
 
-echo "Running the Bash ShellScript..."
+echo "Running the Terminal Keyboard Shortcuts Script..."
 
 # Check if GNOME Terminal is installed
 if ! command -v gnome-terminal &> /dev/null; then

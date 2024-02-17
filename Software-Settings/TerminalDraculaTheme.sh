@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Run:
-# chmod +x ./DraculaTerminalTheme.sh
-# sudo ./DraculaTerminalTheme.sh
+# chmod +x ./TerminalDraculaTheme.sh
+# sudo ./TerminalDraculaTheme.sh
 
 echo "Installing the Dracula Theme for GNOME Terminal..."
 
