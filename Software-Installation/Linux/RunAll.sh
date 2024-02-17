@@ -25,6 +25,7 @@ grant_permissions() {
    echo "Granting Execution Permissions..."
    chmod +x ./*.sh # Grant Execution Permission to all ShellScripts
    chmod +x SubScripts/*.sh # Grant Execution Permission to all ShellScripts inside SubScripts folder
+   chmod +x SubScripts/Manual/*.sh # Grant Execution Permission to all ShellScripts inside Manual folder
    echo "Execution Permissions Granted!"
    echo ""
 }
@@ -32,19 +33,10 @@ grant_permissions() {
 # Run all ShellScripts
 run_main_scripts() {
    echo "Running ShellScripts..."
+
    echo "Running the LinuxBasic ShellScript..."
    ./LinuxBasic.sh # Run LinuxBasic.sh
    echo "LinuxBasic ShellScript Executed!"
-   echo ""
-
-   echo "Running the LinuxMedia ShellScript..."
-   ./LinuxMedia.sh # Run LinuxMedia.sh
-   echo "LinuxMedia ShellScript Executed!"
-   echo ""
-
-   echo "Running the LinuxTools ShellScript..."
-   ./LinuxTools.sh # Run LinuxTools.sh
-   echo "LinuxTools ShellScript Executed!"
    echo ""
 
    echo "Running the LinuxCoding ShellScript..."
@@ -57,9 +49,19 @@ run_main_scripts() {
    echo "LinuxGames ShellScript Executed!"
    echo ""
 
+   echo "Running the LinuxMedia ShellScript..."
+   ./LinuxMedia.sh # Run LinuxMedia.sh
+   echo "LinuxMedia ShellScript Executed!"
+   echo ""
+
    echo "Running the LinuxSnap ShellScript..."
    ./LinuxSnap.sh # Run LinuxSnap.sh
    echo "LinuxSnap ShellScript Executed!"
+   echo ""
+
+   echo "Running the LinuxTools ShellScript..."
+   ./LinuxTools.sh # Run LinuxTools.sh
+   echo "LinuxTools ShellScript Executed!"
    echo ""
 
    echo "ShellScripts Executed!"
@@ -69,6 +71,9 @@ run_main_scripts() {
 # Run all ShellScript SubScripts
 run_sub_scripts() {
    echo "Running SubScripts..."
+
+   echo "Running the AppImagesLauncher SubScript..."
+   ./SubScripts/AppImagesLauncher.sh # Run AppImagesLauncher.sh
 
    echo "Running the BetterDiscord ShellScript SubScript..."
    ./SubScripts/BetterDiscord.sh # Run BetterDiscord.sh
@@ -88,6 +93,9 @@ run_manual_sub_scripts() {
 
    echo "Running the BitWarden ShellScript SubScript..."
    ./SubScripts/Manual/BitWarden.sh # Run BitWarden.sh
+
+   echo "Running the DockStation ShellScript SubScript..."
+   ./SubScripts/Manual/DockStation.sh # Run DockStation.sh
 
    echo "Manual SubScripts Executed!"
 }
