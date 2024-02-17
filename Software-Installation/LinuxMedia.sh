@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Run:
-# chmod +x LinuxMedia.sh
+# chmod +x ./LinuxMedia.sh
 # sudo ./LinuxMedia.sh
 
 # Update Commands:

@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Run:
-# chmod +x GrantPermissions.sh
+# chmod +x ./GrantPermissions.sh
 # sudo ./GrantPermissions.sh
 
 # Grant ShellScripts Execution Permissions

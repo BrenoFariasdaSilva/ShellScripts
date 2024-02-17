@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Run:
+# chmod +x ./AppImagesLauncher.sh
+# sudo ./AppImagesLauncher.sh
+
 echo "Installing AppImageLauncher..."
 
 # Navigate to the Downloads directory

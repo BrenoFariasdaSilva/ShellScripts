@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Run:
-# chmod +x Nautilus.sh
+# chmod +x ./Nautilus.sh
 # sudo ./Nautilus.sh
 
 # Settings:

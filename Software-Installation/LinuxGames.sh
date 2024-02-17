@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Run:
-# chmod +x LinuxGames.sh
+# chmod +x ./LinuxGames.sh
 # sudo ./LinuxGames.sh
 
 # Update Commands:

@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Run:
-# chmod +x BetterDiscord.sh
+# chmod +x ./BetterDiscord.sh
 # sudo ./BetterDiscord.sh
 
 echo "Installing BetterDiscord..."

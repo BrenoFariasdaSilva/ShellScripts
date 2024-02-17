@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Run:
-# chmod +x Bash.sh
+# chmod +x ./Bash.sh
 # sudo ./Bash.sh
 
 # Check if GNOME Terminal is installed

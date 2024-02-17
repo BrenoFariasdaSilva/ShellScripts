@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Run:
-# chmod +x GnomeExtensions.sh
+# chmod +x ./GnomeExtensions.sh
 # sudo ./GnomeExtensions.sh
 
 echo "Installing Gnome Extensions..."

@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Run:
+# chmod +x ./BitWarden.sh
+# sudo ./BitWarden.sh
+
 echo "Installing the latest version of BitWarden Desktop..."
 
 # Define the GitHub API URL for Bitwarden clients releases

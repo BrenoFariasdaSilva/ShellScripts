@@ -1,8 +1,8 @@
 #!/bin/sh
 
 # Run:
-# chmod +x ./WSL.sh
-# sudo ./WSL.sh
+# chmod +x ./WSL-Softwares.sh
+# sudo ./WSL-Softwares.sh
 
 # Update Commands:
 echo "Updating System..."

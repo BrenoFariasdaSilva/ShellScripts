@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Run:
+# chmod +x ./Terminal.sh
+# sudo ./Terminal.sh
+
 # Clone the Dracula theme for GNOME Terminal
 git clone https://github.com/dracula/gnome-terminal.git ~/dracula-gnome-terminal
 

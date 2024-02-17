@@ -1,9 +1,8 @@
 #!/bin/sh
 
 # Run:
-# chmod +x LinuxSnap.sh
+# chmod +x ./LinuxSnap.sh
 # sudo ./LinuxSnap.sh
-# sudo -i
 
 # Update Commands:
 echo "Updating System..."

@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Run:
+# chmod +x ./DockStation.sh
+# sudo ./DockStation.sh
+
 echo "Installing the latest version of DockStation..."
 
 # Define the GitHub API URL for DockStation releases

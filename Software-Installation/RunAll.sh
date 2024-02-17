@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Run:
-# chmod +x RunAll.sh
+# chmod +x ./RunAll.sh
 # sudo ./RunAll.sh
 
 # Update the package list

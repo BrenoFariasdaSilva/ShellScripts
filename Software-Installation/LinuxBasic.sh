@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Run:
-# chmod +x LinuxBasic.sh
+# chmod +x ./LinuxBasic.sh
 # sudo ./LinuxBasic.sh
 
 # Update Commands:

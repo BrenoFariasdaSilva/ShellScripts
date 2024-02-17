@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Run:
-# chmod +x KeyboardShortcuts.sh
+# chmod +x ./KeyboardShortcuts.sh
 # sudo ./KeyboardShortcuts.sh
 
 echo "Setting Keyboard Shortcuts..."

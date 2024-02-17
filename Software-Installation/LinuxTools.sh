@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Run:
-# chmod +x LinuxTools.sh
+# chmod +x ./LinuxTools.sh
 # sudo ./LinuxTools.sh
 
 # Update Commands:
