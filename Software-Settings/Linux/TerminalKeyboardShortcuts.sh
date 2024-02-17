@@ -35,11 +35,23 @@ dconf write /org/gnome/terminal/legacy/keybindings/close-window "'<Alt>F4'"
 
 echo "Copy Text using 'Ctrl+C'"
 # Set the "Copy" shortcut to "Ctrl+C"
-dconf write /org/gnome/terminal/legacy/keybindings/select-all "'<Primary>a'"
+dconf write /org/gnome/terminal/legacy/keybindings/copy "'<Primary>c'"
 
 echo "Paste Text using 'Ctrl+V'"
 # Set the "Paste" shortcut to "Ctrl+V"
 dconf write /org/gnome/terminal/legacy/keybindings/paste "'<Primary>v'"
+
+echo "Find Text using 'Ctrl+F'"
+# Set the "Find" shortcut to "Ctrl+F"
+dconf write /org/gnome/terminal/legacy/keybindings/find "'<Primary>f'"
+
+echo "Select All Text using 'Ctrl+A'"
+# Set the "Select All" shortcut to "Ctrl+A"
+dconf write /org/gnome/terminal/legacy/keybindings/select-all "'<Primary>a'"
+
+echo "Clear terminal using 'Ctrl+L'"
+# Set the "Clear" shortcut to "Ctrl+L"
+dconf write /org/gnome/terminal/legacy/keybindings/reset-and-clear "'<Primary>l'"
 
 echo "Terminal Keyboard Shortcuts Set!"
 echo ""
