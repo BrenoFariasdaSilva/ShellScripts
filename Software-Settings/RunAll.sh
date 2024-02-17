@@ -4,14 +4,6 @@
 # chmod +x ./RunAll.sh
 # sudo ./RunAll.sh
 
-# Update the package list
-update_package_list() {
-   echo "Updating System Package List..."
-   sudo apt update -y # Update package list
-   echo "System Package List Updated!"
-   echo ""
-}
-
 # Grant ShellScripts Execution Permissions
 grant_permissions() {
    echo "Granting Execution Permissions..."
@@ -24,25 +16,21 @@ grant_permissions() {
 run_main_scripts() {
    echo "Running Software Settings Scripts..."
 
-   echo "Running the Bash ShellScript..."
-   ./Bash.sh # Run Bash.sh
-   echo "Bash ShellScript Executed!"
-   echo ""
+   echo "Running the Nautilus Keyboard Shortcuts Script..."
+   sudo ./NautilusKeyboardShortcuts.sh
+   echo "Nautilus Keyboard Shortcuts Set!"
 
-   echo "Running the Dracula Terminal Theme ShellScript..."
-   ./DraculaTerminalTheme.sh # Run DraculaTerminalTheme.sh
-   echo "Dracula Terminal Theme ShellScript Executed!"
-   echo ""
+   echo "Running the Nautilus Settings Script..."
+   sudo ./NautilusSettings.sh
+   echo "Nautilus Settings Set!"
 
-   echo "Running the Keyboard Shortcuts ShellScript..."
-   ./KeyboardShortcuts.sh # Run KeyboardShortcuts.sh
-   echo "Keyboard Shortcuts ShellScript Executed!"
-   echo ""
+   echo "Running the Terminal Dracula Theme Script..."
+   sudo ./TerminalDraculaTheme.sh
+   echo "Terminal Dracula Theme Set!"
 
-   echo "Running the Nautilus Settings ShellScript..."
-   ./NautilusSettings.sh # Run NautilusSettings.sh
-   echo "Nautilus Settings ShellScript Executed!"
-   echo ""
+   echo "Running the Terminal Keyboard Shortcuts Script..."
+   sudo ./TerminalKeyboardShortcuts.sh
+   echo "Terminal Keyboard Shortcuts Set!"
 
    echo "Software Settings Scripts Executed!"
    echo ""
@@ -50,8 +38,6 @@ run_main_scripts() {
 
 # Run all functions
 echo "Running All Functions..."
-update_package_list # Call the update_package_list function to update the package list
 grant_permissions # Call the grant_permissions function to grant execution permissions
 run_main_scripts # Call the run_scripts function to run all ShellScripts
-update_package_list # Call the update_package_list function to update the package list
 echo "System Updated and Software Settings Scripts Executed!"
