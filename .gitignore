@@ -1,10 +1,14 @@
 # Text Files
 *.txt
 
-# System Files
+# Ignore the MacOS DS_Store Files
 .DS_Store
 */.DS_Store
-Thumbs.db
-*/Thumbs.db
+
+# Ignore the Windows .Desktop Files
 desktop.ini
 */desktop.ini
+
+# Ignore the Windows Thumbs.db Files
+Thumbs.db
+*/Thumbs.db
