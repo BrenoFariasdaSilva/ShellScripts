@@ -146,6 +146,7 @@ echo ""
 echo "Installing SpeedTest CLI..."
 sudo apt install curl -y
 curl -s https://packagecloud.io/install/repositories/ookla/speedtest-cli/script.deb.sh | sudo bash
+sudo apt update -y
 sudo apt install speedtest -y
 echo "SpeedTest CLI Installed!"
 echo ""
