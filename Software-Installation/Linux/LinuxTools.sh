@@ -126,6 +126,15 @@ sudo apt install libfuse2 -y
 echo "LibFuse2 AppImage Runner Installed!"
 echo ""
 
+# MegaSync:
+echo "Installing MegaSync..."
+cd ~/Downloads || return
+wget https://mega.nz/linux/repo/xUbuntu_22.04/amd64/megasync-xUbuntu_22.04_amd64.deb
+sudo apt install ./megasync-xUbuntu_22.04_amd64.deb -y
+rm ./megasync-xUbuntu_22.04_amd64.deb
+echo "MegaSync Installed!"
+echo ""
+
 # Net-Tools:
 echo "Installing Net-Tools..."
 sudo apt install net-tools -y
