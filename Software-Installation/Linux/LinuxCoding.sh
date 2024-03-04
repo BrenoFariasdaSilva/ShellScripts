@@ -84,7 +84,7 @@ echo ""
 
 # CLang:
 echo "Installing CLang..."
-sudo apt install clang-12 -y
+sudo apt install clang -y
 echo "CLang Installed!"
 echo ""
 
