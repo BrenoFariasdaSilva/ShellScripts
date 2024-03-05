@@ -147,6 +147,12 @@ sudo apt install tesseract-ocr-all -y
 echo "OCR Tesseract Installed!"
 echo ""
 
+# Octave:
+echo "Installing Octave..."
+sudo apt install octave -y
+echo "Octave Installed!"
+echo ""
+
 # OpenRGB:
 echo "Installing OpenRGB..."
 sudo add-apt-repository ppa:thopiekar/openrgb -y
