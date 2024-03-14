@@ -136,7 +136,7 @@ sudo apt install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
 # Optionally, add your user to the docker group to run docker commands without sudo
 sudo groupadd docker
 sudo usermod -aG docker $USER
-sudo apt get install docker -y
+sudo apt install docker -y
 sudo apt install docker.io -y
 sudo curl -L "https://github.com/docker/compose/releases/download/1.23.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
