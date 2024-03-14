@@ -38,7 +38,7 @@ echo "Installing $FILENAME..."
 sudo apt install "./$FILENAME" -y
 if [ $? -ne 0 ]; then
 	echo "Installation failed. Attempting to fix missing dependencies..."
-	sudo apt-get install -f -y
+	sudo apt install -f -y
 fi
 
 # Clean up by removing the downloaded .deb file
