@@ -6,6 +6,7 @@
 
 # Grant ShellScripts Execution Permissions
 grant_permissions() {
+  chmod +x GitHub/*.sh # Grant Execution Permission to the GitHub ShellScripts
   chmod +x Software-Installation/Linux/*.sh # Grant Execution Permission to the Linux ShellScripts
   chmod +x Software-Installation/Linux/SubScripts/*.sh # Grant Execution Permission to all ShellScripts inside SubScripts folder
   chmod +x Software-Installation/Linux/SubScripts/Manual/*.sh # Grant Execution Permission to all ShellScripts inside SubScripts/Manual folder
