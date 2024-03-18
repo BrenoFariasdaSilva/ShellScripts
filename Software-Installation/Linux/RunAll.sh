@@ -75,9 +75,6 @@ run_sub_scripts() {
    echo "Running the AppImagesLauncher SubScript..."
    ./SubScripts/AppImagesLauncher.sh # Run AppImagesLauncher.sh
 
-   echo "Running the BetterDiscord ShellScript SubScript..."
-   ./SubScripts/BetterDiscord.sh # Run BetterDiscord.sh
-
    echo "Running the GnomeExtensions SubScript..."
    ./SubScripts/GnomeExtensions.sh # Run LinuxAndroidStudio.sh
 
@@ -96,6 +93,9 @@ run_manual_sub_scripts() {
 
    echo "Running the DockStation ShellScript SubScript..."
    ./SubScripts/Manual/DockStation.sh # Run DockStation.sh
+
+   echo "Running the Vencord ShellScript SubScript..."
+   ./SubScripts/Manual/Vencord.sh # Run Vencord.sh
 
    echo "Manual SubScripts Executed!"
 }
