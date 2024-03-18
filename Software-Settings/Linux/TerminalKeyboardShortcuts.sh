@@ -53,5 +53,9 @@ echo "Clear terminal using 'Ctrl+L'"
 # Set the "Clear" shortcut to "Ctrl+L"
 dconf write /org/gnome/terminal/legacy/keybindings/reset-and-clear "'<Primary>l'"
 
+echo "Disable the F1 Help Shortcut"
+# Disable the "F1" shortcut for Help
+xmodmap -e "keycode 67 ="
+
 echo "Terminal Keyboard Shortcuts Set!"
 echo ""
