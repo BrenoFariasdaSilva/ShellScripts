@@ -157,6 +157,12 @@ echo "export PATH=\"\$FLYCTL_INSTALL/bin:\$PATH\"" >>~/.zshrc
 echo "Fly.IO Installed!"
 echo ""
 
+# Git Filter Repo:
+echo "Installing Git Filter Repo..."
+sudo apt install git-filter-repo -y
+echo "Git Filter Repo Installed!"
+echo ""
+
 # GoDot:
 # Define where to install the Godot binary
 INSTALL_DIR="/usr/local/bin"
