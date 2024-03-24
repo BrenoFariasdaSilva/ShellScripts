@@ -167,6 +167,12 @@ sudo apt install pulseeffects -y
 echo "PulseEffects Installed!"
 echo ""
 
+# Raspberry Pi Imager:
+echo "Installing Raspberry Pi Imager..."
+sudo apt install rpi-imager -y
+echo "Raspberry Pi Imager Installed!"
+echo ""
+
 # Signal:
 echo "Installing Signal..."
 cd ~/Downloads || return
