@@ -59,12 +59,12 @@ echo ""
 # DrawIO:
 echo "Installing DrawIO..."
 cd ~/Downloads || return
-LATEST_RELEASE_INFO=$(curl -s https://api.github.com/repos/jgraph/drawio-desktop/releases/latest) # Fetch the latest release data from DrawIO GitHub repository
+LATEST_RELEASE_INFO=$(curl -s https://api.github.com/repos/jgraph/drawio-desktop/releases/latest)                # Fetch the latest release data from DrawIO GitHub repository
 DOWNLOAD_URL=$(echo "$LATEST_RELEASE_INFO" | grep "browser_download_url.*drawio-amd64.*\.deb" | cut -d '"' -f 4) # Extract the download URL for the latest .deb package
-wget "$DOWNLOAD_URL" # Download the latest .deb package
-DEB_FILE=$(basename "$DOWNLOAD_URL") # Extract the file name from the download URL
-sudo dpkg -i "$DEB_FILE" # Install the downloaded package
-rm "$DEB_FILE" # Remove the .deb package after installation
+wget "$DOWNLOAD_URL"                                                                                             # Download the latest .deb package
+DEB_FILE=$(basename "$DOWNLOAD_URL")                                                                             # Extract the file name from the download URL
+sudo dpkg -i "$DEB_FILE"                                                                                         # Install the downloaded package
+rm "$DEB_FILE"                                                                                                   # Remove the .deb package after installation
 echo "DrawIO Installed!"
 echo ""
 
@@ -113,6 +113,13 @@ echo "Installing JabRef..."
 sudo apt install jabref -y
 echo "JabRef Installed!"
 echo ""
+
+# KDiskMark:
+echo "Installing KDiskMark..."
+sudo add-apt-repository ppa:jonmagon/kdiskmark -y
+sudo apt update -y
+sudo apt install kdiskmark -y
+echo "KDiskMark Installed!"
 
 # LM-Sensors:
 echo "Installing LM-Sensors..."
