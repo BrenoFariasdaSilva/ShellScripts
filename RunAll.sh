@@ -21,12 +21,12 @@ get_os_name() {
 run_os_functions() {
    local os_name="$1"
 
-   if [ "$os_name" == "Linux" ]; then
+   if [ "$os_name" = "Linux" ]; then
       echo "Running the Linux Functions..."
       run_linux_scripts # Call the run_linux_scripts function
       echo "Linux Functions Executed!"
       echo ""
-   elif [ "$os_name" == "WSL" ]; then
+   elif [ "$os_name" = "WSL" ]; then
       echo "Running the WSL Functions..."
       run_wsl_scripts # Call the run_wsl_scripts function
       echo "WSL Functions Executed!"
